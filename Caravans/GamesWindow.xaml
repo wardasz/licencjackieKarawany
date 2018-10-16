@@ -1,0 +1,60 @@
+﻿<Window x:Class="Caravans.GamesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Caravans"
+        mc:Ignorable="d"
+        Title="Caravans" HorizontalAlignment="Center" VerticalAlignment="Center" Height="678" Width="939" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="map.jpg" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None" SizeToContent="Height" ResizeMode="NoResize" WindowState="Maximized">
+    <Window.Foreground>
+        <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\map.jpg}" Stretch="None"/>
+    </Window.Foreground>
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF342E2E" Offset="1"/>
+                <GradientStop Color="#FF6E412D" Offset="0.934"/>
+                <GradientStop Color="#FF5F2315" Offset="0.329"/>
+                <GradientStop Color="#FF150501" Offset="0.765"/>
+                <GradientStop Color="#FF722A26" Offset="0.202"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Image x:Name="map_jpg" Source="map.jpg" Stretch="Fill" Margin="80,42,80,50" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="obud_png" Margin="-25,-25,-14,-25" Source="obud.png" Stretch="Fill"/>
+        <Button x:Name="Bmenu" Content="Zamknij" HorizontalAlignment="Right" Height="42" Margin="0,13,19,0" VerticalAlignment="Top" Width="137" FontSize="24" BorderBrush="Black" Foreground="White" Click="Bmenu_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bac.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="18" Margin="129,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Background="White" Foreground="#FF1D1717"><Run Text="{Binding Path=KASA}"/></TextBlock>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="34" Margin="80,24,0,0" VerticalAlignment="Top" Width="44">
+            <Image x:Name="gold_jpg" Margin="0,-1,-1,0" Source="gold.jpg" Stretch="Fill"/>
+        </Border>
+        <Button x:Name="BWaggon" Content="KARAWANA" HorizontalAlignment="Left" Height="68" FontSize="28" Margin="28,0,0,21" VerticalAlignment="Bottom" Width="237" Click="BWaggon_Click" Foreground="#FFFBFBFB">
+            <Button.Background>
+                <ImageBrush ImageSource="bac.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Bend" Content="ODDAJ TURĘ" HorizontalAlignment="Left" Height="65" FontSize="24" Margin="28,0,0,94" VerticalAlignment="Bottom" Width="237" Foreground="White" Click="Bend_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bac.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="zegarek" HorizontalAlignment="Left" Margin="293,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Foreground="Black" RenderTransformOrigin="0.5,0.5" Width="111"><Run Text="{Binding Path=CZAS}"/></TextBlock>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="239,23,0,0" VerticalAlignment="Top" Width="49">
+            <Border.Background>
+                <ImageBrush ImageSource="klepsydra.jpg"/>
+            </Border.Background>
+        </Border>
+        <Button x:Name="Save" HorizontalAlignment="Left" Height="34" Margin="28,24,0,0" VerticalAlignment="Top" Width="47" Click="Save_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Save.png"/>
+            </Button.Background>
+        </Button>
+
+
+
+
+
+    </Grid>
+</Window>

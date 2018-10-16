@@ -1,0 +1,437 @@
+﻿<Window x:Class="Caravans.Zakupy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Caravans"
+        mc:Ignorable="d"
+        Title="authors"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="793" Width="1097.864" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
+    <Window.Foreground>
+        <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
+    </Window.Foreground>
+    <Grid Margin="42,4,116,75">
+        <Grid.Background>
+            <ImageBrush ImageSource="{Binding F:\\proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" TileMode="FlipXY">
+                <ImageBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ImageBrush.RelativeTransform>
+            </ImageBrush>
+        </Grid.Background>
+        <Image x:Name="ob_jpg" Margin="-51,-16,-122,-90" Source="ob.jpg" Stretch="Fill"/>
+        <Button x:Name="exitZ" Content="Zamknij" HorizontalAlignment="Left" Height="40" Margin="897,725,-49,-51" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.924,-0.172" Foreground="#FFFDFAFA" Click="exitZ_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="bac.jpg"/>
+            </Button.Background>
+        </Button>
+        <Canvas Height="65" Margin="748,362,-14,362">
+            <Image x:Name="apple_jpg1" Height="55" Source="apple.jpg" Stretch="Fill" Width="53"/>
+            <Label x:Name="label" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenahleb" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="3" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaJablKup}"/></TextBlock>
+            <Label x:Name="iljab" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iljabtour" Canvas.Left="172" TextWrapping="Wrap" Foreground="Black" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileJablMi}"/></TextBlock>
+            <Label x:Name="potjab" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="27" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spjab" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="21" Foreground="Black" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaJablSp}"/></TextBlock>
+
+        </Canvas>
+        <Canvas Margin="748,291,0,434">
+            <Label x:Name="labe2" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenatree" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="8" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaDrewKup}"/></TextBlock>
+            <Label x:Name="label3" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iltreetour" Canvas.Left="172" TextWrapping="Wrap" Foreground="Black" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileDrewMi}"/></TextBlock>
+            <Label x:Name="pottree" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spdrzewo" Canvas.Left="177" TextWrapping="Wrap" Foreground="Black" Canvas.Top="22" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaDrewSp}"/></TextBlock>
+
+            <Image x:Name="tree1_jpg" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8"/>
+        </Canvas>
+        <Canvas Margin="748,439,0,295">
+            <Label x:Name="labe3" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenameate" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="7" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaMiesKup}"/></TextBlock>
+            <Label x:Name="ilmeat" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilmeattour" Canvas.Left="172" Foreground="Black" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileMiesMi}"/></TextBlock>
+            <Label x:Name="potmeat" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="sptmieso" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="22" Foreground="Black" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaMiesSp}"/></TextBlock>
+
+            <Image x:Name="meat_jpg" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="meat_JPG" Height="45" Canvas.Left="10" Source="meat.JPG" Stretch="Fill" Canvas.Top="10" Width="48"/>
+        </Canvas>
+        <Canvas Margin="748,227,0,317">
+            <Label x:Name="labe5" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenachleb" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="3" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaChlebKup}"/></TextBlock>
+            <Label x:Name="label6" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilchlebtour" Canvas.Left="172" Foreground="Black" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileChlebMi}"/></TextBlock>
+            <Label x:Name="potchleb" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spchleb" Canvas.Left="177" Foreground="Black" TextWrapping="Wrap" Canvas.Top="22" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaChlebSp}"/></TextBlock>
+
+            <Image x:Name="chleb_jpg" Height="47" Source="chleb.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="chleb.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,171,0,556">
+            <Label x:Name="labe7" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenabron" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="8" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaBronKup}"/></TextBlock>
+            <Label x:Name="label8" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilbrontour" Canvas.Left="172" TextWrapping="Wrap" Foreground="Black" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileBronMi}"/></TextBlock>
+            <Label x:Name="potbron" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spbron" Canvas.Left="177" Foreground="Black" TextWrapping="Wrap" Canvas.Top="23" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaBronSp}"/></TextBlock>
+
+            <Image x:Name="bron_jpg" Height="47" Source="bron1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="bron1.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="bron_JPG" Height="45" Canvas.Left="10" Source="bron1.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,103,0,630">
+            <Label x:Name="labe9" Content="CENA KUPNA " Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenawino" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="4" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaWinoKup}"/></TextBlock>
+            <Label x:Name="label10" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilwinotour" Canvas.Left="172" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileWinoMi}"/></TextBlock>
+            <Label x:Name="potwino" Content="CENA SPRZEDARZY:" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spWino" Canvas.Left="172" TextWrapping="Wrap" Canvas.Top="21" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaWinoSp}"/></TextBlock>
+
+            <Image x:Name="wino_jpg" Height="47" Source="vino.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="vino_JPG" Height="45" Canvas.Left="10" Source="vino.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="vino.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,41,-49,687">
+            <Label x:Name="label11" Content="CENA KUPNA:" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenatkanina" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="177" Canvas.Top="7" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaTkanKup}"/></TextBlock>
+            <Label x:Name="label12" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iltkaninatour" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileTkanMi}"/></TextBlock>
+            <Label x:Name="pottkanina" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="sptkanina" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="21" Width="46" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaTkanSp}"/></TextBlock>
+
+            <Image x:Name="tkanina_jpg" Height="47" Source="tkanina.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="tkanina_JPG" Height="45" Canvas.Left="10" Source="tkanina.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="tkanina.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,500,0,220">
+            <Label x:Name="label13" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenaperla1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="177" Canvas.Top="3" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaPerlKup}"/></TextBlock>
+            <Label x:Name="label14" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilperlatour1" Canvas.Left="172" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePerlMi}"/></TextBlock>
+            <Label x:Name="potperla" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spperla1" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaPerlSp}"/></TextBlock>
+
+            <Image x:Name="perla_jpg" Height="47" Source="perla.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="perla_JPG" Height="45" Canvas.Left="10" Source="perla.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="perla.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,556,0,161">
+            <Label x:Name="labe15" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenaskora" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="170" Canvas.Top="3" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaSkorKup}"/></TextBlock>
+            <Label x:Name="label16" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilskoratour" Canvas.Left="172" TextWrapping="Wrap" Foreground="Black" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileSkorMi}"/></TextBlock>
+            <Label x:Name="potskora" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spskora" Canvas.Left="177" TextWrapping="Wrap" Foreground="Black" Canvas.Top="23" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaSkorSp}"/></TextBlock>
+
+            <Image x:Name="skora_jpg" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="skora_JPG" Height="45" Canvas.Left="10" Source="skora.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="skora.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,613,0,100">
+            <Label x:Name="labe17" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenanafta" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" Canvas.Top="3" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaAlchKup}"/></TextBlock>
+            <Label x:Name="label18" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilnaftatour" Canvas.Left="172" TextWrapping="Wrap" Foreground="Black" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileAlchMi}"/></TextBlock>
+            <Label x:Name="potnafta" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spnafta" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaAlchSp}"/></TextBlock>
+
+            <Image x:Name="nafta_jpg" Height="47" Source="nafta.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="nafta_JPG" Height="45" Canvas.Left="10" Source="nafta.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="nafta.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="748,671,0,42">
+            <Label x:Name="labe19" Content="CENA KUPNA" Canvas.Left="58" Width="144" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="cenaprzyprawy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Height="19" Foreground="Black" Canvas.Left="172" RenderTransformOrigin="0.831,0.547" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaPrzypKup}"/></TextBlock>
+            <Label x:Name="label20" Content="Ilość towaru w mieście:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="114" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilprzyprawytour" Canvas.Left="172" Foreground="Black" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ilePrzypMi}"/></TextBlock>
+            <Label x:Name="potprzyprawy" Content="CENA SPRZEDARZY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="spprzyprawy" Canvas.Left="177" Foreground="Black" TextWrapping="Wrap" Canvas.Top="21" RenderTransformOrigin="0.209,-0.4" Height="15" Width="46" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=cenaPrzypSp}"/></TextBlock>
+
+            <Image x:Name="przyprawy_jpg" Height="47" Source="przyprawy.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="przyprawy_JPG" Height="45" Canvas.Left="10" Source="przyprawy.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="przyprawy.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+
+
+        <Canvas Height="65" Margin="57,362,652,362">
+            <Image x:Name="applew_jpg1" Height="55" Source="apple.jpg" Stretch="Fill" Width="53"/>
+            <Label x:Name="iljabw" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="134" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iljabwagt" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" Foreground="Black"><Run Text="{Binding Path=ileJablKar}"/></TextBlock>
+            <Label x:Name="potjabw" Content="JABŁKA" Canvas.Left="58" Canvas.Top="19" Height="27" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+        </Canvas>
+        <Canvas Margin="57,291,652,434">
+            <Label x:Name="label3w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="134" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iltreewag" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileDrewKar}"/></TextBlock>
+            <Label x:Name="pottreew" Content="DRZEWO" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="tree1w_jpg" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8"/>
+        </Canvas>
+        <Canvas Margin="57,439,652,295">
+            <Label x:Name="ilmeatw" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="134" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilmeatwag" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileMiesKar}"/></TextBlock>
+            <Label x:Name="potmeatw" Content="MIĘSO" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="meatw_jpg" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="meat_JPGw" Height="45" Canvas.Left="10" Source="meat.JPG" Stretch="Fill" Canvas.Top="10" Width="48"/>
+        </Canvas>
+        <Canvas Margin="57,227,652,504">
+            <Label x:Name="label6w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilchlebwag" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileChlebKar}"/></TextBlock>
+            <Label x:Name="potchlebw" Content="CHLEB" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="chlebw_jpg" Height="47" Source="chleb.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="chleb.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,171,0,556">
+            <Label x:Name="label8w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="129" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilbronwag" Canvas.Left="187" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileBronKar}"/></TextBlock>
+            <Label x:Name="potbronw" Content="BROŃ" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="bronw_jpg" Height="47" Source="bron1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="bron1.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="bronw_JPG" Height="45" Canvas.Left="10" Source="bron1.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,103,652,630">
+            <Label x:Name="label10w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="134" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilwinowag" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileWinoKar}"/></TextBlock>
+            <Label x:Name="potwinow" Content="WINO" Canvas.Left="58" Canvas.Top="16" Height="24" Width="150" FontFamily="Sylfaen" FontSize="10"/>
+
+            <Image x:Name="winow_jpg" Height="47" Source="vino.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="vinow_JPG" Height="45" Canvas.Left="10" Source="vino.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="vino.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,41,652,687">
+            <Label x:Name="label12w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="132" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="iltkaninawag" Canvas.Left="190" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileTkanKar}"/></TextBlock>
+            <Label x:Name="pottkaninaw" Content="TKANINA" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="tkaninaw_jpg" Height="47" Source="tkanina.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="tkaninaw_JPG" Height="45" Canvas.Left="10" Source="tkanina.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="tkanina.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,500,652,220">
+            <Label x:Name="label14w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="136" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilperlawag" Canvas.Left="194" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePelrKar}"/></TextBlock>
+            <Label x:Name="potperlaw" Content="PERLA" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="perlaw_jpg" Height="47" Source="perla.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="perlaw_JPG" Height="45" Canvas.Left="10" Source="perla.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="perla.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,556,652,161">
+            <Label x:Name="label16w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="134" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilskorawag" Canvas.Left="192" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileSkorKar}"/></TextBlock>
+            <Label x:Name="potskoraw" Content="SKORA" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="skora_jpgw" Height="47" Source="tree1.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="skoraw_JPG" Height="45" Canvas.Left="10" Source="skora.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="skora.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,613,652,100">
+            <Label x:Name="label18w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
+            <Label x:Name="potnaftaw" Content="SUBSTANCJE ALCHEMICZNE" Canvas.Left="58" Canvas.Top="19" Height="24" Width="181" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="nafta_jpgw" Height="47" Source="nafta.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="naftaw_JPG" Height="45" Canvas.Left="10" Source="nafta.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="nafta.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Canvas Margin="57,671,652,42">
+            <Label x:Name="label20w" Content="Ilość towaru w karawanie:" Canvas.Left="58" Canvas.Top="31" Height="24" Width="133" FontFamily="Sylfaen" FontSize="10"/>
+            <TextBlock x:Name="ilprzyprawywag" Canvas.Left="191" TextWrapping="Wrap" Canvas.Top="36" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePrzypKar}"/></TextBlock>
+            <Label x:Name="potprzyprawyw" Content="PRZYPRAWY" Canvas.Left="58" Canvas.Top="19" Height="24" Width="150" FontFamily="Sylfaen" FontSize="12"/>
+
+            <Image x:Name="przyprawyw_jpgw" Height="47" Source="przyprawy.jpg" Stretch="Fill" Width="63" Canvas.Top="8">
+                <Image.OpacityMask>
+                    <ImageBrush/>
+                </Image.OpacityMask>
+            </Image>
+            <Image x:Name="przyprawyw_JPG" Height="45" Canvas.Left="10" Source="przyprawy.JPG" Stretch="Fill" Canvas.Top="10" Width="48">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="przyprawy.jpg"/>
+                </Image.OpacityMask>
+            </Image>
+        </Canvas>
+        <Button x:Name="sp" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,60,0,0" VerticalAlignment="Top" Width="83" Click="buttonT1_Click"/>
+        <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Margin="418,60,0,0" VerticalAlignment="Top" Width="27" Click="buttonT2_Click"/>
+        <Button x:Name="kup" Content="Kupuj" HorizontalAlignment="Left" Margin="665,60,0,0" VerticalAlignment="Top" Width="83" Click="buttonT3_Click"/>
+        <Button x:Name="plus" Content="+" HorizontalAlignment="Left" Margin="634,60,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Click="buttonT4_Click"/>
+        <TextBlock x:Name="tkan" HorizontalAlignment="Left" Height="23" Margin="450,60,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spwi" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,120,0,0" VerticalAlignment="Top" Width="83" Click="buttonW1_Click" Height="23"/>
+        <Button x:Name="minuswi" Content="-" HorizontalAlignment="Left" Margin="418,120,0,0" VerticalAlignment="Top" Width="27" Click="buttonW2_Click" Height="23"/>
+        <Button x:Name="kupwi" Content="Kupuj" HorizontalAlignment="Left" Margin="665,120,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonW3_Click"/>
+        <Button x:Name="pluswi" Content="+" HorizontalAlignment="Left" Margin="634,120,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonW4_Click"/>
+        <TextBlock x:Name="wino" HorizontalAlignment="Left" Height="23" Margin="450,120,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spbr" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,180,0,0" VerticalAlignment="Top" Width="83" Click="buttonB1_Click" Height="23"/>
+        <Button x:Name="minusbr" Content="-" HorizontalAlignment="Left" Margin="418,180,0,0" VerticalAlignment="Top" Width="27" Click="buttonB2_Click" Height="23"/>
+        <Button x:Name="kupbr" Content="Kupuj" HorizontalAlignment="Left" Margin="665,180,0,0" VerticalAlignment="Top" Width="83" Click="buttonB3_Click" Height="23"/>
+        <Button x:Name="plusbr" Content="+" HorizontalAlignment="Left" Margin="634,180,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonB4_Click"/>
+        <TextBlock x:Name="bron" HorizontalAlignment="Left" Height="23" Margin="450,180,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"><Run Text="{Binding Path=BR}"/></TextBlock>
+
+        <Button x:Name="sphl" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,240,0,0" VerticalAlignment="Top" Width="83" Click="buttonC1_Click" Height="23"/>
+        <Button x:Name="minushl" Content="-" HorizontalAlignment="Left" Margin="418,240,0,0" VerticalAlignment="Top" Width="27" Click="buttonC2_Click" Height="23"/>
+        <Button x:Name="kuphl" Content="Kupuj" HorizontalAlignment="Left" Margin="665,240,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonC3_Click"/>
+        <Button x:Name="plushl" Content="+" HorizontalAlignment="Left" Margin="634,240,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonC4_Click"/>
+        <TextBlock x:Name="hleb" HorizontalAlignment="Left" Height="23" Margin="450,240,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spdrz" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,300,0,0" VerticalAlignment="Top" Width="83" Click="buttonD1_Click" Height="23"/>
+        <Button x:Name="minusdrz" Content="-" HorizontalAlignment="Left" Margin="418,300,0,0" VerticalAlignment="Top" Width="27" Click="buttonD2_Click" Height="23"/>
+        <Button x:Name="kupbrdrz" Content="Kupuj" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonD3_Click"/>
+        <Button x:Name="plusbrdrz" Content="+" HorizontalAlignment="Left" Margin="634,300,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonD4_Click"/>
+        <TextBlock x:Name="brondrz" HorizontalAlignment="Left" Height="23" Margin="450,300,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spjabl" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,365,0,0" VerticalAlignment="Top" Width="83" Click="buttonJ1_Click" Height="23"/>
+        <Button x:Name="minusjab" Content="-" HorizontalAlignment="Left" Margin="418,365,0,0" VerticalAlignment="Top" Width="27" Click="buttonJ2_Click" Height="23"/>
+        <Button x:Name="kupjab" Content="Kupuj" HorizontalAlignment="Left" Margin="665,365,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonJ3_Click"/>
+        <Button x:Name="plusjab" Content="+" HorizontalAlignment="Left" Margin="634,365,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonJ4_Click"/>
+        <TextBlock x:Name="jabl" HorizontalAlignment="Left" Height="23" Margin="450,365,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spms" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,450,0,0" VerticalAlignment="Top" Width="83" Click="buttonM1_Click" Height="23"/>
+        <Button x:Name="minusms" Content="-" HorizontalAlignment="Left" Margin="418,450,0,0" VerticalAlignment="Top" Width="27" Click="buttonM2_Click" Height="23"/>
+        <Button x:Name="kupbrms" Content="Kupuj" HorizontalAlignment="Left" Margin="665,450,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonM3_Click"/>
+        <Button x:Name="plusbrms" Content="+" HorizontalAlignment="Left" Margin="634,450,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonM4_Click"/>
+        <TextBlock x:Name="mies" HorizontalAlignment="Left" Height="23" Margin="450,450,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="sppr" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,510,0,0" VerticalAlignment="Top" Width="83" Click="buttonP1_Click" Height="23"/>
+        <Button x:Name="minuspr" Content="-" HorizontalAlignment="Left" Margin="418,510,0,0" VerticalAlignment="Top" Width="27" Click="buttonP2_Click" Height="23"/>
+        <Button x:Name="kupbrpr" Content="Kupuj" HorizontalAlignment="Left" Margin="665,510,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonP3_Click"/>
+        <Button x:Name="plusbrpr" Content="+" HorizontalAlignment="Left" Margin="634,510,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonP4_Click"/>
+        <TextBlock x:Name="perl" HorizontalAlignment="Left" Height="23" Margin="450,510,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spsk" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,560,0,0" VerticalAlignment="Top" Width="83" Click="buttonS1_Click" Height="23"/>
+        <Button x:Name="minussk" Content="-" HorizontalAlignment="Left" Margin="418,560,0,0" VerticalAlignment="Top" Width="27" Click="buttonS2_Click" Height="23"/>
+        <Button x:Name="kupsk" Content="Kupuj" HorizontalAlignment="Left" Margin="665,560,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonS3_Click"/>
+        <Button x:Name="plussk" Content="+" HorizontalAlignment="Left" Margin="634,560,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonS4_Click"/>
+        <TextBlock x:Name="skur" HorizontalAlignment="Left" Height="23" Margin="450,560,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spsr" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,620,0,0" VerticalAlignment="Top" Width="83" Click="buttonA1_Click" Height="23"/>
+        <Button x:Name="minussr" Content="-" HorizontalAlignment="Left" Margin="418,620,0,0" VerticalAlignment="Top" Width="27" Click="buttonA2_Click" Height="23"/>
+        <Button x:Name="kupsr" Content="Kupuj" HorizontalAlignment="Left" Margin="665,620,0,0" VerticalAlignment="Top" Width="83" Height="23" Click="buttonA3_Click"/>
+        <Button x:Name="plusbsr" Content="+" HorizontalAlignment="Left" Margin="634,620,0,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Height="23" Click="buttonA4_Click"/>
+        <TextBlock x:Name="srodki" HorizontalAlignment="Left" Height="23" Margin="450,620,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Button x:Name="spprz" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,680,0,-5" VerticalAlignment="Top" Width="83" Click="buttonX1_Click" Height="23" BorderBrush="#FF727171"/>
+        <Button x:Name="minusprz" Content="-" HorizontalAlignment="Left" Margin="418,680,0,-5" VerticalAlignment="Top" Width="27" Click="buttonX2_Click" Height="23"/>
+        <Button x:Name="kupprz" Content="Kupuj" HorizontalAlignment="Left" Margin="665,680,0,-5" VerticalAlignment="Top" Width="83" Height="23" Click="buttonX3_Click"/>
+        <Button x:Name="plusbrprz" Content="+" HorizontalAlignment="Left" Margin="634,680,0,-5" VerticalAlignment="Top" Width="26" RenderTransformOrigin="1.125,-0.174" Click="buttonX4_Click" Height="23"/>
+        <TextBlock x:Name="przyp" HorizontalAlignment="Left" Height="23" Margin="450,680,0,-5" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="179" Background="#FFEAE5E5" Foreground="Black"/>
+
+        <Image x:Name="gold_jpg" Margin="38,733,853,-55" Source="gold.jpg" Stretch="Fill"/>
+        <TextBlock x:Name="GOLD" HorizontalAlignment="Left" Margin="92,750,0,-55" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#FFECDCDC" Width="99" Foreground="#FF131313"><Run Text="{Binding Path=KASA}"/></TextBlock>
+        <TextBlock x:Name="nowy1" HorizontalAlignment="Left" Margin="236,655,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="11" Width="52" Foreground="Black" FontSize="12" RenderTransformOrigin="0.827,0.818"><Run Text="{Binding Path=ileAlchKar}"/></TextBlock>
+
+
+
+    </Grid>
+
+</Window>

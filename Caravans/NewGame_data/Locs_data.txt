@@ -1,0 +1,12 @@
+﻿LO01,Tourilguard
+LO02,Edgetown
+LO03,Rivercross
+LO04,Sin-Tog
+LO05,Portfolk
+LO06,Mountainroot
+LO07,Bottom Stream
+LO08,Blackyard
+LO09,Lakeshire
+LO10,Lothrand
+LO11,Waterclaw
+LO12,Hightown

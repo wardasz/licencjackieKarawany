@@ -1,0 +1,11 @@
+﻿TO01,Drewno/materialy budowlane,20,10,10
+TO02,Jabko,5,34,33
+TO03,Tkanina,35,10,10
+TO04,Mieso,10,34,33
+TO05,Chleb,5,34,33
+TO06,Bron,100,2,2
+TO07,Perla/kosztownosc,250,0,0
+TO08,Przyprawy,200,0,0
+TO09,Wino,100,5,5
+TO10,Skora,25,10,10
+TO11,Skladniki alchemiczne/medykamenty,50,5,2

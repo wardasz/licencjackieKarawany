@@ -1,0 +1,15 @@
+﻿RD01,LO02,LO05,20,1,Edgetown - Portfolk
+RD02,LO03,LO09,8,1,Rivercross - Lakeshire
+RD03,LO02,LO06,11,1,Edgetown - Mountainroot
+RD04,LO08,LO10,8,1,Blackyard - Lothrand
+RD05,LO11,LO12,9,1,Waterclaw - Hightown
+RD06,LO11,LO04,10,1,Waterclaw - Sin-Tog
+RD07,LO09,LO11,15,1,Lakeshire - Waterclaw
+RD08,LO03,LO08,7,1,Rivercross - Blackyard
+RD09,LO05,LO01,14,1,Portfolk - Tourilguard
+RD10,LO06,LO07,8,1,Mountainroot - Bottom Stream
+RD11,LO10,LO09,4,1,Lothrand - Lakeshire
+RD12,LO03,LO07,6,1,Rivercross - Bottom Stream
+RD13,LO02,LO07,15,1,Edgetown - Bottom Stream
+RD14,LO01,LO03,12,1,Tourilguard - Rivercross
+RD15,LO06,LO08,9,1,Mountainroot - Blackyard
