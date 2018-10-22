@@ -295,6 +295,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="obrazki\buttonTlo.jpg" />
+    <Resource Include="obrazki\ramka1.png" />
     <Resource Include="obrazki\obrazMenu.png" />
     <Resource Include="NewGame_data\Article_data.txt" />
     <Resource Include="NewGame_data\Art_in_Caravan_data.txt" />
