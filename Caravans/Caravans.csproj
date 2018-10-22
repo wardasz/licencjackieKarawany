@@ -205,9 +205,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="car.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="map.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -298,6 +295,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="obrazki\obrazMenu.png" />
     <Resource Include="NewGame_data\Article_data.txt" />
     <Resource Include="NewGame_data\Art_in_Caravan_data.txt" />
     <Resource Include="NewGame_data\Art_in_Town_data.txt" />
@@ -309,12 +307,14 @@
     <Resource Include="NewGame_data\Roads_data.txt" />
     <Resource Include="NewGame_data\State_data.txt" />
     <Resource Include="NewGame_data\Town_data.txt" />
-    <Resource Include="car.png" />
     <Content Include="CaravansDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Save.png" />
     <Resource Include="klepsydra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obrazki\towary\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,13 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Caravans" HorizontalAlignment="Center" VerticalAlignment="Center" Height="678" Width="939" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
-    <Window.Foreground>
-        <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
-    </Window.Foreground>
+        Title="Caravans" HorizontalAlignment="Center" VerticalAlignment="Center" Height="678" Width="939" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" ShowInTaskbar="True" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
+
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.png}" TileMode="FlipXY">
+            <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\obrazki\\obrazMenu.png}" TileMode="FlipXY">
                 <ImageBrush.RelativeTransform>
                     <TransformGroup>
                         <ScaleTransform/>
