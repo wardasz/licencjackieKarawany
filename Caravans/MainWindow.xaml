@@ -8,18 +8,18 @@
 
     <Grid>
         <Image Source="obrazki\obrazMenu.png" Stretch="Fill"/>
-        <Image Source="obrazki\ramka1.png" Margin="-18,-25,-19,-25" Stretch="Fill"/>   
-        <Button x:Name="Bplay" Content="Wczytaj gre" HorizontalAlignment="Left" Height="72" Margin="666,143,0,0" VerticalAlignment="Top" Width="226" FontSize="30" BorderBrush="Black" Foreground="#FFF7F1F1" Click="wczytaj_Click">
+        <Image Source="obrazki\ramka1.png" Margin="-18,-25,-19,-25" Stretch="Fill"/>
+        <Button x:Name="Bplay" Content="Wczytaj gre" HorizontalAlignment="Left" Height="72" Margin="666,143,0,0" VerticalAlignment="Top" Width="226" FontSize="30" BorderBrush="Black" Foreground="White" Click="wczytaj_Click">
             <Button.Background>
                 <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Bauthors" Content="Autorzy" HorizontalAlignment="Left" Height="72" FontSize="24" Margin="732,470,0,0" VerticalAlignment="Top" Width="160" Click="Bauthors_Click" BorderBrush="Black" Foreground="#FFF7F1F1">
+        <Button x:Name="Bauthors" Content="Autorzy" HorizontalAlignment="Left" Height="72" FontSize="24" Margin="732,470,0,0" VerticalAlignment="Top" Width="160" Click="Bauthors_Click" BorderBrush="Black" Foreground="White">
             <Button.Background>
                 <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Bexit" Content="Wyjscie" HorizontalAlignment="Left" Height="62" Margin="732,562,0,0" VerticalAlignment="Top" Width="160" FontSize="28" Click="Bexit_Click" BorderBrush="Black" Foreground="#FFF7F1F1">
+        <Button x:Name="Bexit" Content="Wyjscie" HorizontalAlignment="Left" Height="62" Margin="732,562,0,0" VerticalAlignment="Top" Width="160" FontSize="28" Click="Bexit_Click" BorderBrush="Black" Foreground="White">
             <Button.Background>
                 <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>

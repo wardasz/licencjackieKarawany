@@ -205,9 +205,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="map.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="obud.png" />
   </ItemGroup>
   <ItemGroup>
@@ -274,9 +271,6 @@
     <Resource Include="wag1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mani.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="kaz.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +289,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="obrazki\towary\zloto.jpg" />
+    <Resource Include="obrazki\towary\klepsydra.jpg" />
+    <Resource Include="obrazki\towary\dyskietka.png" />
+    <Resource Include="obrazki\mapa.jpg" />
+    <Resource Include="obrazki\ksiega.jpg" />
     <Resource Include="obrazki\buttonTlo.jpg" />
     <Resource Include="obrazki\ramka1.png" />
     <Resource Include="obrazki\obrazMenu.png" />
@@ -313,10 +312,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Resource Include="Save.png" />
-    <Resource Include="klepsydra.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obrazki\towary\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

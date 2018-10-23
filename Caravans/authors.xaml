@@ -5,45 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Caravans"
         mc:Ignorable="d"
-        Title="authors"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="460.331" Width="584.864" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
-    <Window.Foreground>
-        <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
-    </Window.Foreground>
+        Title="authors"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="460.331" Width="584.864" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
+
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="{Binding F:\\proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" TileMode="FlipXY">
-                <ImageBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ImageBrush.RelativeTransform>
-            </ImageBrush>
-        </Grid.Background>
-        <Image x:Name="car_jpg" Source="car.jpg" Stretch="Fill"/>
-        <Image x:Name="obud_png" Margin="-15,-17,-12,-17" Source="obud.png" Stretch="Fill"/>
-        <Label x:Name="label" Content="   AUTORZY" HorizontalAlignment="Left" Height="70" Margin="10,31,0,0" VerticalAlignment="Top" Width="299" Foreground="White" FontSize="48" FontWeight="Normal">
+        <Image Source="obrazki\obrazMenu.png" Stretch="Fill"/>
+        <Image Source="obrazki\ramka1.png" Margin="-13,-18,-14,-18" Stretch="Fill"/>
+        <Image x:Name="book_jpg" Margin="61,117,68,30" Source="obrazki\ksiega.jpg" Stretch="Fill"/>
+        
+        <Label x:Name="label1" Content="   AUTORZY" HorizontalAlignment="Left" Height="70" Margin="10,31,0,0" VerticalAlignment="Top" Width="299" Foreground="White" FontSize="48" FontWeight="Normal">
             <Label.Background>
-                <ImageBrush ImageSource="bac.jpg"/>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Label.Background>
         </Label>
         <Button x:Name="bexit" Content="Zamknij" HorizontalAlignment="Left" Height="70" Margin="487,31,0,0" VerticalAlignment="Top" Width="88" Click="bexit_Click" Foreground="White" FontSize="22" FontWeight="Normal">
             <Button.Background>
-                <ImageBrush ImageSource="bac.jpg"/>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>
         </Button>
-        <Image x:Name="book_jpg" Margin="61,117,68,30" Source="book.jpg" Stretch="Fill"/>
-        <Label x:Name="label1" Content="Aleksy Kirsanow" HorizontalAlignment="Left" Height="28" Margin="109,170,0,0" VerticalAlignment="Top" Width="174"/>
-        <Label x:Name="label2" Content="Marcin Wardziński" HorizontalAlignment="Left" Height="29" Margin="109,278,0,0" VerticalAlignment="Top" Width="184"/>
-        <Label x:Name="label3" Content="Kamil Kiedrowicz" HorizontalAlignment="Left" Height="28" Margin="309,170,0,0" VerticalAlignment="Top" Width="167"/>
-        <Label x:Name="label4" Content="Mark Rybak" HorizontalAlignment="Left" Height="29" Margin="309,278,0,0" VerticalAlignment="Top" Width="167"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="77" Margin="327,307,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"><Run Foreground="Black" FontSize="10" Text="GUI"/><Run Text=",jhg"/></TextBlock>
-        <Label x:Name="label5" Content="Modelei&#xD;&#xA;Baza danych&#xD;&#xA;Połączenie z BD&#xD;&#xA;Świat Gry" HorizontalAlignment="Left" Height="70" Margin="109,203,0,0" VerticalAlignment="Top" Width="157" FontSize="10"/>
-        <Label x:Name="label6" Content="Mapa&#xD;&#xA;Funkcje użytkownicze&#xD;&#xA;" HorizontalAlignment="Left" Height="61" Margin="327,203,0,0" VerticalAlignment="Top" Width="130" FontSize="10"/>
-        <Label x:Name="label7" Content="Matematyka świat&#xD;&#xA;Klakulator cen&#xD;&#xA;Rozwój miast" HorizontalAlignment="Left" Height="72" Margin="109,312,0,0" VerticalAlignment="Top" Width="157" FontSize="10"/>
-
+        
+        <Label x:Name="label2" Content="Aleksy Kirsanow" HorizontalAlignment="Left" Height="28" Margin="109,170,0,0" VerticalAlignment="Top" Width="174"/>
+        <Label x:Name="label3" Content="Modele&#xD;&#xA;Baza danych&#xD;&#xA;Połączenie z BD&#xD;&#xA;Świat Gry" HorizontalAlignment="Left" Height="70" Margin="109,203,0,0" VerticalAlignment="Top" Width="157" FontSize="10"/>
+        <Label x:Name="label4" Content="Marcin Wardziński" HorizontalAlignment="Left" Height="29" Margin="109,278,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="label5" Content="Matematyka świata&#xD;&#xA;Klakulator cen&#xD;&#xA;Rozwój miast&#xD;&#xA;Optymalizacja i poprawki" HorizontalAlignment="Left" Height="72" Margin="109,312,0,0" VerticalAlignment="Top" Width="157" FontSize="10"/>
+        <Label x:Name="label6" Content="Kamil Kiedrowicz" HorizontalAlignment="Left" Height="28" Margin="309,170,0,0" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="label7" Content="Mapa&#xD;&#xA;Funkcje użytkownicze&#xD;&#xA;" HorizontalAlignment="Left" Height="61" Margin="327,203,0,0" VerticalAlignment="Top" Width="130" FontSize="10"/>
+        <Label x:Name="label8" Content="Mark Rybak" HorizontalAlignment="Left" Height="29" Margin="309,278,0,0" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="label9" Content="GUI" HorizontalAlignment="Left" FontSize="10" Height="77" Margin="327,312,0,0" VerticalAlignment="Top" Width="130"/>
+        
     </Grid>
 
 </Window>

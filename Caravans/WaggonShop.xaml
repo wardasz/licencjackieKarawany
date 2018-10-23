@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Caravans"
         mc:Ignorable="d"
-       Title="MiastoTour"  HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="622.331" Width="808.364" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None" Margin="0" MinWidth="20">
+       Title="MiastoTour"  HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="622.331" Width="808.364" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None" Margin="0" MinWidth="20">
     <Window.Foreground>
         <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
     </Window.Foreground>
