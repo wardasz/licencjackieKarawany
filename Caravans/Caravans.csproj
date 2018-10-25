@@ -289,6 +289,19 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="obrazki\woz1.jpg" />
+    <Resource Include="obrazki\towary\przyprawy.jpg" />
+    <Resource Include="obrazki\towary\alchemia.jpg" />
+    <Resource Include="obrazki\towary\skora.jpg" />
+    <Resource Include="obrazki\towary\perla.jpg" />
+    <Resource Include="obrazki\towary\tkanina.jpg" />
+    <Resource Include="obrazki\towary\wino.jpg" />
+    <Resource Include="obrazki\towary\bron.jpg" />
+    <Resource Include="obrazki\towary\chleb.jpg" />
+    <Resource Include="obrazki\towary\mieso.jpg" />
+    <Resource Include="obrazki\towary\drewno.jpg" />
+    <Resource Include="obrazki\towary\jablko.jpg" />
+    <Resource Include="obrazki\miasto1.png" />
     <Resource Include="obrazki\towary\zloto.jpg" />
     <Resource Include="obrazki\towary\klepsydra.jpg" />
     <Resource Include="obrazki\towary\dyskietka.png" />
