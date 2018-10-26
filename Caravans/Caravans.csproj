@@ -271,9 +271,6 @@
     <Resource Include="wag1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="kaz.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="ob.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -289,6 +286,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="obrazki\ramka2.jpg" />
+    <Resource Include="obrazki\ludek1.jpg" />
     <Resource Include="obrazki\woz1.jpg" />
     <Resource Include="obrazki\towary\przyprawy.jpg" />
     <Resource Include="obrazki\towary\alchemia.jpg" />

@@ -5,115 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Caravans"
         mc:Ignorable="d"
- Title="authors"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="781.608" Width="729.545" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
-    <Window.Foreground>
-        <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
-    </Window.Foreground>
-    <Grid Margin="0,0,57,10">
-        <Grid.Background>
-            <ImageBrush ImageSource="{Binding F:\\proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" TileMode="FlipXY">
-                <ImageBrush.RelativeTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ImageBrush.RelativeTransform>
-            </ImageBrush>
-        </Grid.Background>
-        <Image x:Name="car_jpg" Source="car.jpg" Stretch="Fill" Margin="-10,0,-54,-10"/>
-        <Image x:Name="obud_png" Margin="-13,-32,-70,-40" Source="obud.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.248"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+         Title="authors"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="600" Width="600" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None">
 
-        <Image x:Name="book_jpg" Margin="28,43,-30,30" Source="book.jpg" Stretch="Fill"/>
+    <Grid>
+        <Image x:Name="book_jpg" Source="obrazki\ksiega.jpg" Stretch="Fill"/>
+        <Image Source="obrazki\ramka1.png" Margin="-13,-18,-10,-18" Stretch="Fill"/>
 
-        <Button x:Name="exitP" Content="Zamknij" HorizontalAlignment="Left"  Height="70" Margin="572,31,-30,0" VerticalAlignment="Top" Width="131" Click="exitP_Click" Foreground="White" FontSize="22" FontWeight="Bold">
+        <Button x:Name="exitP" Content="Zamknij" HorizontalAlignment="Left" Height="60" Margin="460,29,0,0" VerticalAlignment="Top" Width="120" Click="exitP_Click" Foreground="White" FontSize="22" FontWeight="Bold">
             <Button.Background>
-                <ImageBrush ImageSource="bac.jpg"/>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>
         </Button>
-        <Menu x:Name="menu" HorizontalAlignment="Right" Height="538" Margin="0,166,400,68" VerticalAlignment="Center" Width="103" Background="{x:Null}">
-            <Button x:Name="Btourilguard" Content="Tourilguard" Width="93" Height="55" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="Btourilguard_Click">
-                <Button.BorderBrush>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="Black" Offset="0"/>
-                        <GradientStop Color="White" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.BorderBrush>
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BEdgetown" Content="Edgetown" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BEdgetown_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BRivercross" Content="Rivercross" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BRivercross_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BSinTog" Content="Sin-Tog" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BSinTog_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BPortfolk" Content="Portfolk" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BPortfolk_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BMountainroot" Content="Mountainroot" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BMountainroot_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-        </Menu>
-        <Menu x:Name="menu2" HorizontalAlignment="Right" Height="538" Margin="0,166,98,68" VerticalAlignment="Center" Width="109" Background="{x:Null}">
-
-            <Button x:Name="BBottomStream" Content="Bottom Stream" Height="50" Width="93" Foreground="White"  FontFamily="Stencil" FontWeight="Bold" Click="BBottomStream_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BBlackyardt" Content="Blackyard" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BBlackyardt_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-     
-            <Button x:Name="BLakeshiret" Content="Lakieshire" Height="50" Width="93" Foreground="White" Click="BLakeshiret_Click" FontFamily="Stencil" FontWeight="Bold">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BLothrant" Content="Lothrand" Height="50" Width="93" Foreground="White" Click="BLothrant_Click" FontFamily="Stencil" FontWeight="Bold">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BWaterclaw" Content="Waterclaw" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BWaterclaw_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-            </Button>
-            <Button x:Name="BHightown" Content="Hightown" Height="50" Width="93" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BHightown_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="bac.jpg"/>
-                </Button.Background>
-
-            </Button>
-        </Menu>
+        <Button x:Name="BHightown" Content="Hightown" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BHightown_Click" Margin="100,100,380,450">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BWaterclaw" Content="Waterclaw" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BWaterclaw_Click" Margin="100,175,380,375">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BLothrant" Content="Lothrand" Height="50" Width="120" Foreground="White" Click="BLothrant_Click" FontFamily="Stencil" FontWeight="Bold" Margin="100,250,380,300">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BLakeshiret" Content="Lakieshire" Height="50" Width="120" Foreground="White" Click="BLakeshiret_Click" FontFamily="Stencil" FontWeight="Bold" Margin="100,325,380,225">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BBlackyardt" Content="Blackyard" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BBlackyardt_Click" Margin="100,400,380,150">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BEdgetown" Content="Edgetown" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BEdgetown_Click" Margin="100,475,380,75">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BBottomStream" Content="Bottom Stream" Height="50" Width="120" Foreground="White"  FontFamily="Stencil" FontWeight="Bold" Click="BBottomStream_Click" Margin="385,100,95,450">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BMountainroot" Content="Mountainroot" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BMountainroot_Click" Margin="385,175,95,375">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BPortfolk" Content="Portfolk" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BPortfolk_Click" Margin="385,250,95,300">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BSinTog" Content="Sin-Tog" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BSinTog_Click" Margin="385,325,95,225">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BRivercross" Content="Rivercross" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="BRivercross_Click" Margin="385,400,95,150">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Btourilguard" Content="Tourilguard" Height="50" Width="120" Foreground="White" FontFamily="Stencil" FontWeight="Bold" Click="Btourilguard_Click" Margin="385,475,95,75">
+            <Button.Background>
+                <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
+            </Button.Background>
+        </Button>
     </Grid>
-
 </Window>

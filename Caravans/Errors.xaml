@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Caravans"
         mc:Ignorable="d"
-        Title="Caravans" HorizontalAlignment="Center" VerticalAlignment="Center" Height="396" Width="940.5" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" Icon="car.jpg" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
+        Title="Caravans" HorizontalAlignment="Center" VerticalAlignment="Center" Height="396" Width="940.5" Visibility="Visible" WindowStartupLocation="CenterScreen" ContentStringFormat="Carawans" FontFamily="Stencil" FontSize="16" FontWeight="Bold" ShowInTaskbar="False" Cursor="Arrow" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
     <Window.Foreground>
         <ImageBrush ImageSource="{Binding proekt_zespolowy\\Caravans\\Caravans\\car.jpg}" Stretch="None"/>
     </Window.Foreground>
