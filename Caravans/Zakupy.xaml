@@ -16,9 +16,6 @@
             </Button.Background>
         </Button>
 
-        <Image Source="obrazki\towary\zloto.jpg" Margin="-47,737,997,0"/>
-        <TextBlock x:Name="GOLD" HorizontalAlignment="Left" Margin="70,760,0,16" TextWrapping="Wrap"  IsEnabled="False" Background="#FFECDCDC" Width="99" Foreground="#FF131313"><Run Text="{Binding Path=KASA}"/></TextBlock>
-
         <Image x:Name="tkanina_JPG"  Source="obrazki\towary\tkanina.jpg" Height="50" Width="50" Margin="70, 60" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="pottkaninaw" Content="TKANINA"  Height="24" Width="100" Margin="125,60" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label12w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,80" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>

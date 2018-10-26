@@ -205,7 +205,6 @@ namespace Caravans
             spprzyprawy.Text = przypCS;
             ilprzyprawytour.Text = przypIM;
 
-            GOLD.Text = kasa;
 
         }
 

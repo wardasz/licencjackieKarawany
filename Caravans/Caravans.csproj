@@ -205,73 +205,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="obud.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="buttom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bac.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="miasto1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="gold.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images %281%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="book.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="apple.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tree1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="meat.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="chleb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="bron1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="vino.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tkanina.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="perla.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="skora.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="nafta.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="przyprawy.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="wag.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="wag %282%29.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="wag1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ob.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -323,7 +257,6 @@
     <Content Include="CaravansDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Save.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
