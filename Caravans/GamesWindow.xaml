@@ -34,12 +34,12 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="34" Margin="80,24,0,0" VerticalAlignment="Top" Width="44">
             <Image x:Name="gold_jpg" Source="obrazki\towary\zloto.jpg" Stretch="Fill"/>
         </Border>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="18" Margin="129,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Background="White" Foreground="#FF1D1717"><Run Text="{Binding Path=KASA}"/></TextBlock>
+        <TextBlock x:Name="poleKasa" Text="0" HorizontalAlignment="Left" Height="18" Margin="129,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Background="White" Foreground="Black"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="35" Margin="239,23,0,0" VerticalAlignment="Top" Width="49">
             <Border.Background>
                 <ImageBrush ImageSource="obrazki\towary\klepsydra.jpg"/>
             </Border.Background>
         </Border>
-        <TextBlock x:Name="zegarek" HorizontalAlignment="Left" Margin="293,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Foreground="Black" RenderTransformOrigin="0.5,0.5" Width="111"><Run Text="{Binding Path=CZAS}"/></TextBlock>
+        <TextBlock x:Name="poleCzas" Text="0" HorizontalAlignment="Left" Margin="293,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="White" Foreground="Black" Width="111"/>
     </Grid>
 </Window>

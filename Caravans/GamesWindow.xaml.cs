@@ -26,32 +26,14 @@ namespace Caravans
 
         public Boolean kar = false;
 
-        public static string kasa = przekaznik.DajKaseS();
-        public static string czas = przekaznik.DajCzasS();
-
-        public string KASA
-        {
-            get { return kasa; }
-            set { kasa = value; }
-        }
-        public string CZAS
-        {
-            get { return czas; }
-            set { czas = value; }
-        }
+        public static string kasa;
+        public static string czas;
 
         public GamesWindow()
         {
             InitializeComponent();
-            textBlock.DataContext=this;
-            zegarek.DataContext = this;
-
-            kasa = przekaznik.DajKaseS();
-            czas = przekaznik.DajCzasS();
-            zegarek.Text = czas;
-            textBlock.Text = kasa;
+            odswiez();
         }
-
 
         private void Bmenu_Click(object sender, RoutedEventArgs e)
         {
@@ -92,8 +74,8 @@ namespace Caravans
             czas = przekaznik.DajCzasS();
 
             if(kar==true) odswiezKarawane();
-            zegarek.Text = czas;
-            textBlock.Text = kasa;
+            poleCzas.Text = czas;
+            poleKasa.Text = kasa;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)

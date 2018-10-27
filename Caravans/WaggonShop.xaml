@@ -42,11 +42,11 @@
         <Label x:Name="label2" Content="Karawana" HorizontalAlignment="Left" Height="37" Margin="87,49,0,0" VerticalAlignment="Top" Width="119" FontFamily="Sylfaen" FontSize="24"/>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="42" Margin="78,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="284" Foreground="Black" FontFamily="Sylfaen"><Run Text=" "/><Run Text="Karawana ci pomoże w twej pracy!!!"/><LineBreak/><Run Text=" Powodzenia!!"/></TextBlock>
         <Label x:Name="label1" Content="Obciążenie karawany:" HorizontalAlignment="Left" Margin="78,187,0,0" VerticalAlignment="Top" Width="167" FontFamily="Sylfaen"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="22" Margin="245,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Foreground="Black" FontFamily="Sylfaen" RenderTransformOrigin="0.36,0.091" TextAlignment="Right"><Run Foreground="Black" Text="{Binding Path=ileObciozenia}"/></TextBlock>
+        <TextBlock x:Name="obciozenieStanPole" Text="0" HorizontalAlignment="Left" Height="22" Margin="245,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Foreground="Black" FontFamily="Sylfaen" TextAlignment="Right"/>
         <Label x:Name="label1_Copy" Content="/" HorizontalAlignment="Left" Margin="295,187,0,0" VerticalAlignment="Top" Width="38" FontFamily="Sylfaen"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="312,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="22" Foreground="Black" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ilePojemnosci}"/></TextBlock>
+        <TextBlock x:Name="obciozenieMaxPole" Text="0" HorizontalAlignment="Left" Margin="312,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Height="22" Foreground="Black" FontFamily="Sylfaen"/>
         <Label x:Name="label" Content="LOKALIZACJA" HorizontalAlignment="Left" Margin="78,218,0,0" VerticalAlignment="Top" Width="119" Height="41"/>
-        <TextBlock x:Name="lokal" HorizontalAlignment="Left" Height="57" Margin="197,218,0,0" Foreground="Black" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"><Run Foreground="Black" Text="{Binding Path=LOK}"/></TextBlock>
+        <TextBlock x:Name="lokalizacjaPole" Text="gdzies" HorizontalAlignment="Left" Height="57" Margin="197,218,0,0" Foreground="Black" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
 
         <ListBox x:Name="listunia" HorizontalAlignment="Left" Foreground="Black" Height="81" Margin="206,59,0,0" VerticalAlignment="Top" Width="163" SelectionChanged="listunia_SelectionChanged"></ListBox>
 
@@ -55,77 +55,77 @@
                 <Image x:Name="apple_jpg1" Height="50" Source="obrazki\towary\jablko.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe" Content="Jabłka:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="iljab" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="iljabtour" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileJablKar}"/></TextBlock>
+                <TextBlock x:Name="jablkaPole" Text="0" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="tree1_jpg" Height="50" Source="obrazki\towary\drewno.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe2" Content="Drzewo:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label3" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="iltreetour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileDrewKar}"/></TextBlock>
+                <TextBlock x:Name="drewnoPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="meat_jpg" Height="50" Source="obrazki\towary\mieso.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe3" Content="Mięso:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="ilmeat" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilmeattour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileMiesKar}"/></TextBlock>
+                <TextBlock x:Name="miesoPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="chleb_jpg" Height="50" Source="obrazki\towary\chleb.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe5" Content="Chleb:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label6" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="16" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilchlebtour" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileChlebKar}"/></TextBlock>
+                <TextBlock x:Name="chlebPole" Text="0" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="bron_jpg" Height="50" Source="obrazki\towary\bron.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe7" Content="Broń:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label8" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilbrontour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path= ileBronKar}"/></TextBlock>
+                <TextBlock x:Name="bronPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="wino_jpg" Height="50" Source="obrazki\towary\wino.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe9" Content="Wino:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label10" Content="Ilosc towaru w karawanie" Canvas.Left="58" Canvas.Top="16" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilwinotour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileWinoKar}"/></TextBlock>
+                <TextBlock x:Name="winoPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="tkanina_JPG" Height="50" Source="obrazki\towary\tkanina.JPG" Stretch="Fill" Width="50"/>
                 <Label x:Name="label11" Content="Tkaniny:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label12" Content="Ilosc towaru w karawanie" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="iltkaninatour" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileTkanKar}"/></TextBlock>
+                <TextBlock x:Name="tkaninaPole" Text="0" Canvas.Left="188" TextWrapping="Wrap" Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="perla_jpg" Height="47" Source="obrazki\towary\perla.jpg" Stretch="Fill" Width="63" />
                 <Label x:Name="label13" Content="Perła:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label14" Content="Ilosc towaru w karawanie" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilperlatour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path= ilePelrKar}"/></TextBlock>
+                <TextBlock x:Name="perlaPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="skora_JPG" Height="50" Source="obrazki\towary\skora.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe15" Content="Skóra:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label16" Content="Ilosc towaru w karawanie" Canvas.Left="58" Canvas.Top="16" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilskoratour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileSkorKar}"/></TextBlock>
+                <TextBlock x:Name="skoraPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="19" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="nafta_JPG" Height="50" Source="obrazki\towary\alchemia.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe17" Content="Srodki alchemiczne:" Canvas.Left="58" Width="159" FontFamily="Sylfaen"/>
                 <Label x:Name="label18" Content="Ilosc towaru w karawanie" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilsrodtour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ileAlchKar}"/></TextBlock>
+                <TextBlock x:Name="alchemiaPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="przyprawy_jpg" Height="50" Source="obrazki\towary\przyprawy.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe19" Content="Przyprawy:" Canvas.Left="58" Width="144" FontFamily="Sylfaen"/>
                 <Label x:Name="label20" Content="Ilosc towaru w karawanie:" Canvas.Left="58" Canvas.Top="21" Height="24" Width="130" FontFamily="Sylfaen" FontSize="10"/>
-                <TextBlock x:Name="ilprzyprawytour" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"><Run Foreground="Black" Text="{Binding Path=ilePrzypKar}"/></TextBlock>
+                <TextBlock x:Name="przyprawyPole" Text="0" Canvas.Left="188" TextWrapping="Wrap"  Canvas.Top="24" RenderTransformOrigin="0.209,-0.4" Height="19" Width="40" FontSize="12" FontFamily="Sylfaen"/>
             </Canvas>
         </ListBox>
     </Grid>

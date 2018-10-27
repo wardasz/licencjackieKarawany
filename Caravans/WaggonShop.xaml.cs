@@ -37,131 +37,13 @@ namespace Caravans
         public static string pojemnosc;
         public static string obciozenie;
 
-        public void zassaj()
-        {
-            karawany = przekaznik.dajKarawany();
-        
-            tkanIK = przekaznik.IleTowaru(idk, "TO03");
-            winoIK = przekaznik.IleTowaru(idk, "TO09");
-            bronIK = przekaznik.IleTowaru(idk, "TO06");
-            chlebIK = przekaznik.IleTowaru(idk, "TO05");
-            drewIK = przekaznik.IleTowaru(idk, "TO01");
-            jablIK = przekaznik.IleTowaru(idk, "TO02");
-            miesoIK = przekaznik.IleTowaru(idk, "TO04");
-            perlIK = przekaznik.IleTowaru(idk, "TO07");
-            skrIK = przekaznik.IleTowaru(idk, "TO10");
-            alchIK = przekaznik.IleTowaru(idk, "TO11");
-            przypIK = przekaznik.IleTowaru(idk, "TO08");
-            pojemnosc = przekaznik.PoliczPojemnosc(idk).ToString();
-            obciozenie = przekaznik.PoliczObciozenie(idk).ToString();
-        }
-
-
-
-        public string ileObciozenia
-        {
-            get { return obciozenie; }
-            set { obciozenie = value; }
-        }
-
-        public string ilePojemnosci
-        {
-            get { return pojemnosc; }
-            set { pojemnosc = value; }
-        }
-
-        public string ileTkanKar
-        {
-            get { return tkanIK; }
-            set { tkanIK = value; }
-        }
-
-        public string ileWinoKar
-        {
-            get { return winoIK; }
-            set { winoIK = value; }
-        }
-
-        public string ileBronKar
-        {
-            get { return bronIK; }
-            set { bronIK = value; }
-        }
-
-        public string ileChlebKar
-        {
-            get { return chlebIK; }
-            set { chlebIK = value; }
-        }
-
-        public string ileDrewKar
-        {
-            get { return drewIK; }
-            set { drewIK = value; }
-        }
-
-        public string ileJablKar
-        {
-            get { return jablIK; }
-            set { jablIK = value; }
-        }
-
-        public string ileMiesKar
-        {
-            get { return miesoIK; }
-            set { miesoIK = value; }
-        }
-
-        public string ilePelrKar
-        {
-            get { return perlIK; }
-            set { perlIK = value; }
-        }
-
-        public string ileSkorKar
-        {
-            get { return skrIK; }
-            set { skrIK = value; }
-        }
-
-        public string ileAlchKar
-        {
-            get { return alchIK; }
-            set { alchIK = value; }
-        }
-
-        public string ilePrzypKar
-        {
-            get { return przypIK; }
-            set { przypIK = value; }
-        }
-
-        string lokal1 = przekaznik.lokalizuj(idk);
-        public string LOK
-        {
-            get { return lokal1; }
-            set { lokal1 = value; }
-        }
 
         public WaggonShop()
         {
-            idk = "KA01";
-            zassaj();
             InitializeComponent();
-            lokal.DataContext = this;
-            iljabtour.DataContext = this;
-            iltreetour.DataContext = this;
-            ilmeattour.DataContext = this;
-            ilchlebtour.DataContext = this;
-            ilbrontour.DataContext = this;
-            ilwinotour.DataContext = this;
-            iltkaninatour.DataContext = this;
-            ilperlatour.DataContext = this;
-            ilskoratour.DataContext = this;
-            ilsrodtour.DataContext = this;
-            ilprzyprawytour.DataContext = this;
-            textBlock.DataContext = this;
-            textBlock1.DataContext = this;
+            idk = "KA01";
+            odswiez();
+
             listunia.DataContext = this;
 
             listunia.Items.Clear();
@@ -227,35 +109,21 @@ namespace Caravans
 
         public void odswiez()
         {
-            string jablka = przekaznik.IleTowaru(idk, "TO02");
-            string drewno = przekaznik.IleTowaru(idk, "TO01");
-            string mieso = przekaznik.IleTowaru(idk, "TO04");
-            string chleb = przekaznik.IleTowaru(idk, "TO05");
-            string bron = przekaznik.IleTowaru(idk, "TO06");
-            string wino = przekaznik.IleTowaru(idk, "TO09");
-            string tkanina = przekaznik.IleTowaru(idk, "TO03");
-            string perla = przekaznik.IleTowaru(idk, "TO07");
-            string skora = przekaznik.IleTowaru(idk, "TO10");
-            string przyprawy = przekaznik.IleTowaru(idk, "TO08");
-            string alchemia = przekaznik.IleTowaru(idk, "TO11");
-            string obc = przekaznik.PoliczObciozenie(idk).ToString();
-            string poj = przekaznik.PoliczPojemnosc(idk).ToString();
-            string miejsce = przekaznik.lokalizuj(idk);
-
-            iljabtour.Text = jablka;
-            iltreetour.Text = drewno;
-            ilmeattour.Text = mieso;
-            ilchlebtour.Text = chleb;
-            ilbrontour.Text = bron;
-            ilwinotour.Text = wino;
-            iltkaninatour.Text = tkanina;
-            ilperlatour.Text = perla;
-            ilskoratour.Text = skora;
-            ilsrodtour.Text = alchemia;
-            ilprzyprawytour.Text = przyprawy;
-            textBlock.Text = obc;
-            textBlock1.Text = poj;
-            lokal.Text = miejsce;
+            karawany = przekaznik.dajKarawany();
+            tkaninaPole.Text = przekaznik.IleTowaru(idk, "TO03");
+            winoPole.Text = przekaznik.IleTowaru(idk, "TO09");
+            bronPole.Text = przekaznik.IleTowaru(idk, "TO06");
+            chlebPole.Text = przekaznik.IleTowaru(idk, "TO05");
+            drewnoPole.Text = przekaznik.IleTowaru(idk, "TO01");
+            jablkaPole.Text = przekaznik.IleTowaru(idk, "TO02");
+            miesoPole.Text = przekaznik.IleTowaru(idk, "TO04");
+            perlaPole.Text = przekaznik.IleTowaru(idk, "TO07");
+            skoraPole.Text = przekaznik.IleTowaru(idk, "TO10");
+            alchemiaPole.Text = przekaznik.IleTowaru(idk, "TO11");
+            przyprawyPole.Text = przekaznik.IleTowaru(idk, "TO08");
+            obciozenieMaxPole.Text = przekaznik.PoliczPojemnosc(idk).ToString();
+            obciozenieStanPole.Text = przekaznik.PoliczObciozenie(idk).ToString();
+            lokalizacjaPole.Text = przekaznik.lokalizuj(idk);
 
             int jazda = przekaznik.CzasPodrozy(idk);
             if (jazda == 0)

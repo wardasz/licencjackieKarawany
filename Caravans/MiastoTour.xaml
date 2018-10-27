@@ -16,19 +16,19 @@
                 <ImageBrush ImageSource="obrazki\buttonTlo.jpg"/>
             </Button.Background>
         </Button>
-        
-        <TextBlock x:Name="nazwa" HorizontalAlignment="Left" Height="45" Margin="130,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Foreground="Black" FontSize="36" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding Path=NAZWA}"/></TextBlock>
-        <Label x:Name="Ludnoscl" Content="Ludnosc:" HorizontalAlignment="Left" Height="25" Margin="91,92,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
-        <TextBlock x:Name="populacja" HorizontalAlignment="Left" Height="25" Margin="149,92,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding Path=POPULACJA}"/></TextBlock>
 
-        <Label x:Name="Stanl" Content="Ilość żywności:" HorizontalAlignment="Left" Height="20" Margin="395,61,0,0" VerticalAlignment="Top" Width="74" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
-        <Label x:Name="Stanl_Copy1" Content="Oboronność" HorizontalAlignment="Left" Height="20" Margin="395,86,0,0" VerticalAlignment="Top" Width="74" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
-        <Label x:Name="Stanl_Copy" Content="Majętność:" HorizontalAlignment="Left" Height="20" Margin="395,111,0,0" VerticalAlignment="Top" Width="74" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
-        <Label x:Name="Stanl_Copy2" Content="Stany Miasta:" HorizontalAlignment="Left" Height="20" Margin="395,136,0,0" VerticalAlignment="Top" Width="74" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
-        <TextBlock x:Name="zywnosc" HorizontalAlignment="Left" Height="25" Margin="494,61,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding ZYWNOSC}"/></TextBlock>
-        <TextBlock x:Name="obronnosc" HorizontalAlignment="Left" Height="25" Margin="494,86,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding OBRONNOSC}"/></TextBlock>
-        <TextBlock x:Name="majetnosc" HorizontalAlignment="Left" Height="25" Margin="494,111,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding MAJETNOSC}"/></TextBlock>
-        <TextBlock x:Name="stany" HorizontalAlignment="Left" Height="38" Margin="494,136,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="138" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"><Run Foreground="Black" Text="{Binding STANY}"/></TextBlock>
+        <TextBlock x:Name="nazwaPole" Text="Nazwa" HorizontalAlignment="Left" Height="45" Margin="130,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="174" Foreground="Black" FontSize="36" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <Label x:Name="Ludnoscl" Content="Ludnosc:" HorizontalAlignment="Left" Height="25" Margin="91,92,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <TextBlock x:Name="populacjaPole" Text="0" HorizontalAlignment="Left" Height="25" Margin="149,92,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+
+        <Label x:Name="zywnozc" Content="Ilość żywności:" HorizontalAlignment="Left" Height="20" Margin="395,61,0,0" VerticalAlignment="Top" Width="84" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <Label x:Name="militaria" Content="Oboronność:" HorizontalAlignment="Left" Height="20" Margin="395,86,0,0" VerticalAlignment="Top" Width="84" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <Label x:Name="majatek" Content="Majętność:" HorizontalAlignment="Left" Height="20" Margin="395,111,0,0" VerticalAlignment="Top" Width="84" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <Label x:Name="stan" Content="Stany Miasta:" HorizontalAlignment="Left" Height="20" Margin="395,136,0,0" VerticalAlignment="Top" Width="84" FontSize="12" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <TextBlock x:Name="zywnoscPole" Text="0" HorizontalAlignment="Left" Height="25" Margin="494,61,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <TextBlock x:Name="obronnoscPole" Text="0" HorizontalAlignment="Left" Height="25" Margin="494,86,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <TextBlock x:Name="majetnoscPole" Text="0" HorizontalAlignment="Left" Height="25" Margin="494,111,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
+        <TextBlock x:Name="stanyPole" Text="0" HorizontalAlignment="Left" Height="38" Margin="494,136,0,0" VerticalAlignment="Top" TextWrapping="Wrap" Width="138" RenderTransformOrigin="0.534,-0.833" FontSize="10" FontFamily="Monotype Corsiva" Grid.Column="1"/>
 
 
         <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="339" Margin="396,176,-32,0" VerticalAlignment="Top" Width="278" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
@@ -44,89 +44,67 @@
             <Canvas Height="65" Width="345">
                 <Image x:Name="apple_jpg1" Height="50" Source="obrazki\towary\jablko.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="label" Content="Jabłka:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock  x:Name="jablka" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=JABLKA}"/>
-                </TextBlock>
+                <TextBlock  x:Name="jablkaPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="tree1_jpg" Height="50" Source="obrazki\towary\drewno.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe2" Content="Drzewo:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="drewno" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=DREWNO}"/>
-                </TextBlock>
+                <TextBlock x:Name="drewnoPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="meat_jpg" Height="50" Source="obrazki\towary\mieso.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe3" Content="Mięso:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="mieso" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=MIESO}"/>
-                </TextBlock>
+                <TextBlock x:Name="miesoPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="chleb_jpg" Height="50" Source="obrazki\towary\chleb.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe5" Content="Chleb:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="chleb" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=CHLEB}"/>
-                </TextBlock>
+                <TextBlock x:Name="chlebPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="bron_jpg" Height="50" Source="obrazki\towary\bron.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe7" Content="Broń:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="bron"  Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=BRON}"/>
-                </TextBlock>
+                <TextBlock x:Name="bronPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="wino_jpg" Height="50" Source="obrazki\towary\wino.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe9" Content="Wino:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="wino" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="192" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=WINO}"/>
-                </TextBlock>
+                <TextBlock x:Name="winoPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="192" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="tkanina_JPG" Height="50" Source="obrazki\towary\tkanina.JPG" Stretch="Fill" Width="50"/>
                 <Label x:Name="label11" Content="Tkaniny:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="tkanina" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="192" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=TKANINA}"/>
-                </TextBlock>
+                <TextBlock x:Name="tkaninaPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="192" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="perla_jpg" Height="47" Source="obrazki\towary\perla.jpg" Stretch="Fill" Width="63" />
                 <Label x:Name="label13" Content="Perła" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="perla" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=PERLA}"/>
-                </TextBlock>
+                <TextBlock x:Name="perlaPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="skora_JPG" Height="50" Source="obrazki\towary\skora.jpg" Stretch="Fill" Width="50" />
                 <Label x:Name="labe15" Content="Skóra:" Canvas.Left="55" Width="70" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="skora" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=SKORA}"/>
-                </TextBlock>
+                <TextBlock x:Name="skoraPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="nafta_JPG" Height="50" Source="obrazki\towary\alchemia.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe17" Content="Środki alchemiczne:" Canvas.Left="55" Width="150" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="alchemia" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=ALCHEMIA}"/>
-                </TextBlock>
+                <TextBlock x:Name="alchemiaPole" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="193" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
 
             <Canvas Height="65" Width="345">
                 <Image x:Name="przyprawy_jpg" Height="50" Source="obrazki\towary\przyprawy.jpg" Stretch="Fill" Width="50"/>
                 <Label x:Name="labe19" Content="Przyprawy:" Canvas.Left="55" Width="100" FontFamily="Sylfaen"/>
-                <TextBlock x:Name="przyprawy" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10">
-                    <Run Foreground="Black" Text="{Binding Path=PRZYPRAWY}"/>
-                </TextBlock>
+                <TextBlock x:Name="przyprawyPole" Text="0" Canvas.Left="55" Canvas.Top="31" TextWrapping="Wrap" Height="34" Width="191" FontFamily="Sylfaen" FontSize="10"/>
             </Canvas>
         </ListBox>
     </Grid>
