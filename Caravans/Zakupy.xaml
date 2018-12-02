@@ -19,57 +19,57 @@
         <Image x:Name="tkanina_JPG"  Source="obrazki\towary\tkanina.jpg" Height="50" Width="50" Margin="70, 60" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="pottkaninaw" Content="TKANINA"  Height="24" Width="100" Margin="125,60" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label12w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,80" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iltkaninawag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,84" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileTkanKar}"/></TextBlock>
+        <TextBlock x:Name="tkaninaKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,84" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="wino_JPG"  Source="obrazki\towary\wino.jpg" Height="50" Width="50" Margin="70, 120" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potwinow" Content="WINO" Height="24" Width="100" Margin="125,120" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label10w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,140" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilwinowag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,144" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileWinoKar}"/></TextBlock>
+        <TextBlock x:Name="winoKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,144" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="bron_JPG"  Source="obrazki\towary\bron.jpg" Height="50" Width="50" Margin="70, 180" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potbronw" Content="BROŃ" Height="24" Width="100" Margin="125,180" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label8w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,200" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilbronwag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,204" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileBronKar}"/></TextBlock>
+        <TextBlock x:Name="bronKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,204" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="chleb_JPG"  Source="obrazki\towary\chleb.jpg" Height="50" Width="50" Margin="70, 240, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potchlebw" Content="CHLEB" Height="24" Width="100" Margin="125,240" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label6w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,260,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilchlebwag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,264" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileChlebKar}"/></TextBlock>
+        <TextBlock x:Name="chlebKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,264" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="drewno_JPG"  Source="obrazki\towary\drewno.jpg" Height="50" Width="50" Margin="70, 300, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="pottreew" Content="DRZEWO" Height="24" Width="100" Margin="125,300" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label3w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iltreewag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileDrewKar}"/></TextBlock>
+        <TextBlock x:Name="drewnoKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,320,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="jablko_JPG"  Source="obrazki\towary\jablko.jpg" Height="50" Width="50" Margin="70, 360, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potjabw" Content="JABŁKA" Height="24" Width="100" Margin="125,360" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="iljabw" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,380,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iljabwagt" TextWrapping="Wrap" Height="24" Width="40" Margin="270,384,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Foreground="Black"><Run Text="{Binding Path=ileJablKar}"/></TextBlock>
+        <TextBlock x:Name="jablkoKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,384,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="mieso_JPG"  Source="obrazki\towary\mieso.jpg" Height="50" Width="50" Margin="70, 420, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potmeatw" Content="MIĘSO" Height="24" Width="100" Margin="125,420, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="ilmeatw" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,440,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilmeatwag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,444,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileMiesKar}"/></TextBlock>
+        <TextBlock x:Name="miesoKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,444,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="perla_JPG"  Source="obrazki\towary\perla.jpg" Height="50" Width="50" Margin="70, 480, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potperlaw" Content="PERLA" Height="24" Width="100" Margin="125, 480, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label14w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,500,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilperlawag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,504,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePelrKar}"/></TextBlock>
+        <TextBlock x:Name="perlaKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,504,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="skora_JPG"  Source="obrazki\towary\skora.jpg" Height="50" Width="50" Margin="70, 540, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potskoraw" Content="SKORA" Height="24" Width="100" Margin="125, 540, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label16w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,560,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilskorawag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,564,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileSkorKar}"/></TextBlock>
+        <TextBlock x:Name="skoraKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,564,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="alchemia_JPG"  Source="obrazki\towary\alchemia.jpg" Height="50" Width="50" Margin="70, 600, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potnaftaw" Content="SUBSTANCJE ALCHEMICZNE" Height="24" Width="180" Margin="125, 600, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label18w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,620,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="nowy1" TextWrapping="Wrap" Height="24" Width="40" Margin="270,624,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ileAlchKar}"/></TextBlock>
+        <TextBlock x:Name="alchemiaKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,624,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="przyprawy_JPG"  Source="obrazki\towary\przyprawy.jpg" Height="50" Width="50" Margin="70, 660, 0, 0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="potprzyprawyw" Content="PRZYPRAWY" Height="24" Width="100" Margin="125, 660, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="label20w" Content="Ilość towaru w karawanie:" Height="24" Width="130" Margin="125,680,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilprzyprawywag" TextWrapping="Wrap" Height="24" Width="40" Margin="270,684,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePrzypKar}"/></TextBlock>
+        <TextBlock x:Name="przyprawyKarawana" Text="0" TextWrapping="Wrap" Height="24" Width="40" Margin="270,684,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Button x:Name="sp" Content="Sprzedaj" HorizontalAlignment="Left" Margin="330,70,0,0" VerticalAlignment="Top" Width="83" Click="buttonT1_Click"/>
         <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Margin="418,70,0,0" VerticalAlignment="Top" Width="27" Click="buttonT2_Click"/>
@@ -139,90 +139,90 @@
 
         <Image x:Name="tkanina2_JPG"  Source="obrazki\towary\tkanina.jpg" Height="50" Width="50" Margin="770,60,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="label11" Content="CENA KUPNA:" Height="24" Width="130" Margin="820, 60, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenatkanina" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 64, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaTkanKup}"/></TextBlock>
+        <TextBlock x:Name="tkaninaKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 64, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="pottkanina" Content="CENA SPRZEDARZY:" Height="24" Width="130" Margin="820, 75, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="sptkanina" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 79, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaTkanSp}"/></TextBlock>
+        <TextBlock x:Name="tkaninaSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 79, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label12" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 90, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iltkaninatour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 94, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileTkanMi}"/></TextBlock>
+        <TextBlock x:Name="tkaninaMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 94, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="wino2_JPG"  Source="obrazki\towary\wino.jpg" Height="50" Width="50" Margin="770,120,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe9" Content="CENA KUPNA:" Height="24" Width="130" Margin="820, 120, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenawino" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 124, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaWinoKup}"/></TextBlock>
+        <TextBlock x:Name="winoKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 124, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potwino" Content="CENA SPRZEDARZY:" Height="24" Width="130" Margin="820, 135, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spWino" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 139, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaWinoSp}"/></TextBlock>
+        <TextBlock x:Name="winoSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 139, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label10" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 150, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilwinotour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 154, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileWinoMi}"/></TextBlock>
+        <TextBlock x:Name="winoMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 154, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="bron2_JPG"  Source="obrazki\towary\bron.jpg" Height="50" Width="50" Margin="770,180,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe7" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 180, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenabron" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 184, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaBronKup}"/></TextBlock>
+        <TextBlock x:Name="bronKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 184, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potbron" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 195, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spbron" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 199, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaBronSp}"/></TextBlock>
+        <TextBlock x:Name="bronSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 199, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label8" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 210, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilbrontour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 214, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileBronMi}"/></TextBlock>
+        <TextBlock x:Name="bronMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 214, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="chleb2_JPG"  Source="obrazki\towary\chleb.jpg" Height="50" Width="50" Margin="770,240,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe5" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 240, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenachleb" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 244, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaChlebKup}"/></TextBlock>
+        <TextBlock x:Name="chlebKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 244, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potchleb" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 255, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spchleb" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 259, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaChlebSp}"/></TextBlock>
+        <TextBlock x:Name="chlebSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 259, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label6" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 270, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilchlebtour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 274, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileChlebMi}"/></TextBlock>
+        <TextBlock x:Name="chlebMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 274, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="drewno2_JPG"  Source="obrazki\towary\drewno.jpg" Height="50" Width="50" Margin="770,300,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe2" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 300, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenatree" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 304, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaDrewKup}"/></TextBlock>
+        <TextBlock x:Name="drewnoKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 304, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="pottree" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 315, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spdrzewo" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 319, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaDrewSp}"/></TextBlock>
+        <TextBlock x:Name="drewnoSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 319, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label3" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 330, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iltreetour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 334, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileDrewMi}"/></TextBlock>
+        <TextBlock x:Name="drewnoMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 334, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="jablka2_JPG"  Source="obrazki\towary\jablko.jpg" Height="50" Width="50" Margin="770,360,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="label" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 360, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenahleb" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 364, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaJablKup}"/></TextBlock>
+        <TextBlock x:Name="jablkoKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 364, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potjab" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 375, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spjab" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 379, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaJablSp}"/></TextBlock>
+        <TextBlock x:Name="jablkoSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 379, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="iljab" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 390, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="iljabtour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 394, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileJablMi}"/></TextBlock>
+        <TextBlock x:Name="jablkoMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 394, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="mieso2_JPG"  Source="obrazki\towary\mieso.jpg" Height="50" Width="50" Margin="770,420,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe3" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 420, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenameate" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 424, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaMiesKup}"/></TextBlock>
+        <TextBlock x:Name="miesoKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 424, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potmeat" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 435, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="sptmieso" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 439, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaMiesSp}"/></TextBlock>
+        <TextBlock x:Name="miesoSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 439, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="ilmeat" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 450, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilmeattour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 454, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileMiesMi}"/></TextBlock>
+        <TextBlock x:Name="miesoMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 454, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="perla2_JPG"  Source="obrazki\towary\perla.jpg" Height="50" Width="50" Margin="770,480,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="label13" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 480, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenaperla1" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 484, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaPerlKup}"/></TextBlock>
+        <TextBlock x:Name="perlaKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 484, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potperla" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 495, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spperla1" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 499, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaPerlSp}"/></TextBlock>
+        <TextBlock x:Name="perlaSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 499, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label14" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 510, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilperlatour1" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 514, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Text="{Binding Path=ilePerlMi}"/></TextBlock>
+        <TextBlock x:Name="perlaMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 514, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="skora2_JPG"  Source="obrazki\towary\skora.jpg" Height="50" Width="50" Margin="770,540,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe15" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 540, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenaskora" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 544, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaSkorKup}"/></TextBlock>
+        <TextBlock x:Name="skoraKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 544, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potskora" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 555, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spskora" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 559, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaSkorSp}"/></TextBlock>
+        <TextBlock x:Name="skoraSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 559, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label16" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 570, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilskoratour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 574, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileSkorMi}"/></TextBlock>
+        <TextBlock x:Name="skoraMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 574, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="alchemia2_JPG"  Source="obrazki\towary\alchemia.jpg" Height="50" Width="50" Margin="770,600,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe17" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 600, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenanafta" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 604, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaAlchKup}"/></TextBlock>
+        <TextBlock x:Name="alchemiaKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 604, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potnafta" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 615, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spnafta" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 619, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaAlchSp}"/></TextBlock>
+        <TextBlock x:Name="alchemiaSprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 619, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label18" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 630, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilnaftatour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 634, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ileAlchMi}"/></TextBlock>
+        <TextBlock x:Name="alchemiaMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 634, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
 
         <Image x:Name="przyprawy2_JPG"  Source="obrazki\towary\przyprawy.jpg" Height="50" Width="50" Margin="770,660,0,0" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" />
         <Label x:Name="labe19" Content="CENA KUPNA" Height="24" Width="130" Margin="820, 660, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="cenaprzyprawy" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 664, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"><Run Foreground="Black" Text="{Binding Path=cenaPrzypKup}"/></TextBlock>
+        <TextBlock x:Name="przyprawyKupno" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 664, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" FontFamily="Sylfaen" FontSize="12"/>
         <Label x:Name="potprzyprawy" Content="CENA SPRZEDARZY" Height="24" Width="130" Margin="820, 675, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="spprzyprawy" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 679, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=cenaPrzypSp}"/></TextBlock>
+        <TextBlock x:Name="przyprawySprzedarz" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 679, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
         <Label x:Name="label20" Content="Ilość towaru w mieście:" Height="24" Width="130" Margin="820, 690, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Sylfaen" FontSize="10"/>
-        <TextBlock x:Name="ilprzyprawytour" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 694, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"><Run Foreground="Black" Text="{Binding Path=ilePrzypMi}"/></TextBlock>
+        <TextBlock x:Name="przyprawyMiasto" Text="0" TextWrapping="Wrap" Height="24" Width="100" Margin="930, 694, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" FontFamily="Sylfaen" Foreground="Black"/>
     </Grid>
 </Window>

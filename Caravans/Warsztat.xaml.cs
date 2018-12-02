@@ -21,72 +21,26 @@ namespace Caravans
     public partial class Warsztat : Window
     {
         string id;
-        string wozy="x";
-        string pojemnosc="x";
-        string ludzie="x";
-        string ochrona="x";
-        string pomoc="x";
 
         public Warsztat(string a)
         {
             id = a;
             InitializeComponent();
-            ileWozow.DataContext = this;
-            ilePojemnosc.DataContext = this;
-            ileLudzi.DataContext = this;
-            ilePomocnikow.DataContext = this;
-            ileOchrony.DataContext = this;
-            zassaj();
+            odswiez();
         }
 
-        public void zassaj()
+        public void odswiez()
         {
             int w = przekaznik.dajWozy(id);
-            wozy = w.ToString();
+            ileWozow.Text = w.ToString();
             w = w * 2;
             w--;
-            ludzie = w.ToString();
-            pojemnosc = przekaznik.PoliczPojemnosc(id).ToString();
-            ochrona = przekaznik.dajOchrone(id).ToString();
-            pomoc = przekaznik.dajPomagierow(id).ToString();
-
-            ileWozow.Text = wozy;
-            ilePojemnosc.Text = pojemnosc;
-            ileLudzi.Text = ludzie;
-            ileOchrony.Text = ochrona;
-            ilePomocnikow.Text = pomoc;
+            ileLudzi.Text = w.ToString();
+            ilePojemnosc.Text = przekaznik.PoliczPojemnosc(id).ToString();
+            ileOchrony.Text = przekaznik.dajOchrone(id).ToString();
+            ilePomocnikow.Text = przekaznik.dajPomagierow(id).ToString();
         }
-
-
-        public string WOZY
-        {
-            get { return wozy; }
-            set { wozy = value; }
-        }
-
-        public string POJEMNOSC
-        {
-            get { return pojemnosc; }
-            set { pojemnosc = value; }
-        }
-
-        public string LUDZIE
-        {
-            get { return ludzie; }
-            set { ludzie = value; }
-        }
-
-        public string OCHRONA
-        {
-            get { return ochrona; }
-            set { ochrona = value; }
-        }
-
-        public string POMOC
-        {
-            get { return pomoc; }
-            set { pomoc = value; }
-        }
+       
 
         private void ExitWarsztat_Click(object sender, RoutedEventArgs e) => Close();
 
@@ -98,14 +52,14 @@ namespace Caravans
                 Errors er = new Errors("Nie stać cię na zakup wozu");
                 er.Show();
             }
-            zassaj();
+            odswiez();
             MainWindow.odzwierzGlowne();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)  //najmij pomocnika
         {
             warsztat.najmijPomoc(id);
-            zassaj();
+            odswiez();
         }
 
         private void button6_Click(object sender, RoutedEventArgs e) //zwolnij pomocnika
@@ -116,13 +70,13 @@ namespace Caravans
                 Errors er = new Errors("Nie masz pomocników do zwolnienia");
                 er.Show();
             }
-            zassaj();
+            odswiez();
         }
 
         private void button7_Click(object sender, RoutedEventArgs e) //najmij najemnika
         {
             warsztat.najmijOchrone(id);
-            zassaj();
+            odswiez();
         }
 
         private void button8_Click(object sender, RoutedEventArgs e)  //zwolnij najemnika
@@ -133,7 +87,7 @@ namespace Caravans
                 Errors er = new Errors("Nie masz najemników do zwolnienia");
                 er.Show();
             }
-            zassaj();
+            odswiez();
         }
 
         private void nowa(object sender, RoutedEventArgs e) //nowa karawana

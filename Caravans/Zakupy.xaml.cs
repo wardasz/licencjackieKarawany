@@ -17,487 +17,111 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrayNotify;
 
 namespace Caravans
 {
-    /// <summary>
-    /// Логика взаимодействия для Zakupy.xaml
-    /// </summary>
     public partial class Zakupy : Window
     {
-        //ID karawany i miasta-puki co przypisane odgórnie, potem się zrobi by jakoś szukało tych danych
         private static string idk;
         private static string idm;
 
-        //wsadza dane do powyższych zmiennych (włącznie z wywowałem funckji policzenia cen)
         private static ceny dane;
-        private string kasa;
-
-        //lista cen i ilości: IK-ilość w karawanie, IM-ilość w mieście, CK-cena kupna, CS-cena sprzedarzy
-
-        private string tkanIK;
-        private string tkanIM;
-        private string tkanCK;
-        private string tkanCS;
-
-        private string winoIK;
-        private string winoIM;
-        private string winoCK;
-        private string winoCS;
-
-        private string bronIK;
-        private string bronIM;
-        private string bronCK;
-        private string bronCS;
-
-        private string chlebIK;
-        private string chlebIM;
-        private string chlebCK;
-        private string chlebCS;
-
-        private string drewIK;
-        private string drewIM;
-        private string drewCK;
-        private string drewCS;
-
-        private string jablIK;
-        private string jablIM;
-        private string jablCK;
-        private string jablCS;
-
-        private string miesoIK;
-        private string miesoIM;
-        private string miesoCK;
-        private string miesoCS;
-
-        private string perlIK;
-        private string perlIM;
-        private string perlCK;
-        private string perlCS;
-
-        private string skrIK;
-        private string skrIM;
-        private string skrCK;
-        private string skrCS;
-
-        private string alchIK;
-        private string alchIM;
-        private string alchCK;
-        private string alchCS;
-
-        private string przypIK;
-        private string przypIM;
-        private string przypCK;
-        private string przypCS;
-
-        public void zassaj()
-        {
-            idm = przekaznik.lok(idk);
-            dane = new ceny(idm);
-            kasa = przekaznik.DajKaseS();
-
-            tkanIK = przekaznik.IleTowaru(idk, "TO03");
-            tkanIM = dane.getIle("TO03");
-            tkanCK = dane.getCenaKup("TO03");
-            if (tkanCK == "-1") { tkanCK = "niemożliwe"; }
-            tkanCS = dane.getCenaSp("TO03");
-
-            winoIK = przekaznik.IleTowaru(idk, "TO09");
-            winoIM = dane.getIle("TO09");
-            winoCK = dane.getCenaKup("TO09");
-            if (winoCK == "-1") { winoCK = "niemożliwe"; }
-            winoCS = dane.getCenaSp("TO09");
-
-            bronIK = przekaznik.IleTowaru(idk, "TO06");
-            bronIM = dane.getIle("TO06");
-            bronCK = dane.getCenaKup("TO06");
-            if (bronCK == "-1") { bronCK = "niemożliwe"; }
-            bronCS = dane.getCenaSp("TO06");
-
-            chlebIK = przekaznik.IleTowaru(idk, "TO05");
-            chlebIM = dane.getIle("TO05");
-            chlebCK = dane.getCenaKup("TO05");
-            if (chlebCK == "-1") { chlebCK = "niemożliwe"; }
-            chlebCS = dane.getCenaSp("TO05");
-
-            drewIK = przekaznik.IleTowaru(idk, "TO01");
-            drewIM = dane.getIle("TO01");
-            drewCK = dane.getCenaKup("TO01");
-            if (drewCK == "-1") { drewCK = "niemożliwe"; }
-            drewCS = dane.getCenaSp("TO01");
-
-            jablIK = przekaznik.IleTowaru(idk, "TO02");
-            jablIM = dane.getIle("TO02");
-            jablCK = dane.getCenaKup("TO02");
-            if (jablCK == "-1") { jablCK = "niemożliwe"; }
-            jablCS = dane.getCenaSp("TO02");
-
-            miesoIK = przekaznik.IleTowaru(idk, "TO04");
-            miesoIM = dane.getIle("TO04");
-            miesoCK = dane.getCenaKup("TO04");
-            if (miesoCK == "-1") { miesoCK = "niemożliwe"; }
-            miesoCS = dane.getCenaSp("TO04");
-
-            perlIK = przekaznik.IleTowaru(idk, "TO07");
-            perlIM = dane.getIle("TO07");
-            perlCK = dane.getCenaKup("TO07");
-            if (perlCK == "-1") { perlCK = "niemożliwe"; }
-            perlCS = dane.getCenaSp("TO07");
-
-            skrIK = przekaznik.IleTowaru(idk, "TO10");
-            skrIM = dane.getIle("TO10");
-            skrCK = dane.getCenaKup("TO10");
-            if (skrCK == "-1") { skrCK = "niemożliwe"; }
-            skrCS = dane.getCenaSp("TO10");
-
-            alchIK = przekaznik.IleTowaru(idk, "TO11");
-            alchIM = dane.getIle("TO11");
-            alchCK = dane.getCenaKup("TO11");
-            if (alchCK == "-1") { alchCK = "niemożliwe"; }
-            alchCS = dane.getCenaSp("TO11");
-
-            przypIK = przekaznik.IleTowaru(idk, "TO08");
-            przypIM = dane.getIle("TO08");
-            przypCK = dane.getCenaKup("TO08");
-            if (przypCK == "-1") { przypCK = "niemożliwe"; }
-            przypCS = dane.getCenaSp("TO08");
-
-
-            iltkaninatour.Text = tkanIM;
-            iltkaninawag.Text = tkanIK;
-            cenatkanina.Text = tkanCK;
-            sptkanina.Text = tkanCS;
-            ilwinowag.Text = winoIK;
-            cenawino.Text = winoCK;
-            spWino.Text = winoCS;
-            ilwinotour.Text = winoIM;
-            ilbronwag.Text = bronIK;
-            cenabron.Text = bronCK;
-            spbron.Text = bronCS;
-            ilbrontour.Text = bronIM;
-            ilchlebwag.Text = chlebIK;
-            cenachleb.Text = chlebCK;
-            spchleb.Text = chlebCS;
-            ilchlebtour.Text = chlebIM;
-            iltreewag.Text = drewIK;
-            cenatree.Text = drewCK;
-            spdrzewo.Text = drewCS;
-            iltreetour.Text = drewIM;
-            iljabwagt.Text = jablIK;
-            cenahleb.Text = jablCK;
-            spjab.Text = jablCS;
-            iljabtour.Text = jablIM;
-            ilmeatwag.Text = miesoIK;
-            cenameate.Text = miesoCK;
-            sptmieso.Text = miesoCS;
-            ilmeattour.Text = miesoIM;
-            ilperlawag.Text = perlIK;
-            cenaperla1.Text = perlCK;
-            spperla1.Text = perlCS;
-            ilperlatour1.Text = perlIM;
-            ilskorawag.Text = skrIK;
-            cenaskora.Text = skrCK;
-            spskora.Text = skrCS;
-            ilskoratour.Text = skrIM;
-            nowy1.Text = alchIK;
-            cenanafta.Text = alchCK;
-            spnafta.Text = alchCS;
-            ilnaftatour.Text = alchIM;
-            ilprzyprawywag.Text = przypIK;
-            cenaprzyprawy.Text = przypCK;
-            spprzyprawy.Text = przypCS;
-            ilprzyprawytour.Text = przypIM;
-
-
-        }
-
-
-        //tworzenie dodatkowych zmiennych-obiektów odpowiedzialnych za wyświelanie danych
-        public string KASA
-        {
-            get { return kasa; }
-            set { kasa = value; }
-        }
-
-        public string ileTkanKar
-        {
-            get { return tkanIK; }
-            set { tkanIK = value; }
-        }
-
-        public string ileWinoKar
-        {
-            get { return winoIK; }
-            set { winoIK = value; }
-        }
-
-        public string ileBronKar
-        {
-            get { return bronIK; }
-            set { bronIK = value; }
-        }
-
-        public string ileChlebKar
-        {
-            get { return chlebIK; }
-            set { chlebIK = value; }
-        }
-
-        public string ileDrewKar
-        {
-            get { return drewIK; }
-            set { drewIK = value; }
-        }
-
-        public string ileJablKar
-        {
-            get { return jablIK; }
-            set { jablIK = value; }
-        }
-
-        public string ileMiesKar
-        {
-            get { return miesoIK; }
-            set { miesoIK = value; }
-        }
-
-        public string ilePelrKar
-        {
-            get { return perlIK; }
-            set { perlIK = value; }
-        }
-
-        public string ileSkorKar
-        {
-            get { return skrIK; }
-            set { skrIK = value; }
-        }
-
-        public string ileAlchKar
-        {
-            get { return alchIK; }
-            set { alchIK = value; }
-        }
-
-        public string ilePrzypKar
-        {
-            get { return przypIK; }
-            set { przypIK = value; }
-        }
-
-        public string ileTkanMi
-        {
-            get { return tkanIM; }
-            set { tkanIM = value; }
-        }
-
-        public string ileWinoMi
-        {
-            get { return winoIM; }
-            set { winoIM = value; }
-        }
-
-        public string ileBronMi
-        {
-            get { return bronIM; }
-            set { bronIM = value; }
-        }
-
-        public string ileChlebMi
-        {
-            get { return chlebIM; }
-            set { chlebIM = value; }
-        }
-
-        public string ileDrewMi
-        {
-            get { return drewIM; }
-            set { drewIM = value; }
-        }
-
-        public string ileJablMi
-        {
-            get { return jablIM; }
-            set { jablIM = value; }
-        }
-
-        public string ileMiesMi
-        {
-            get { return miesoIM; }
-            set { miesoIM = value; }
-        }
-
-        public string ilePerlMi
-        {
-            get { return perlIM; }
-            set { perlIM = value; }
-        }
-
-        public string ileSkorMi
-        {
-            get { return skrIM; }
-            set { skrIM = value; }
-        }
-
-        public string ileAlchMi
-        {
-            get { return alchIM; }
-            set { alchIM = value; }
-        }
-
-        public string ilePrzypMi
-        {
-            get { return przypIM; }
-            set { przypIM = value; }
-        }
-
-        public string cenaTkanSp
-        {
-            get { return tkanCS; }
-            set { tkanCS = value; }
-        }
-
-        public string cenaWinoSp
-        {
-            get { return winoCS; }
-            set { winoCS = value; }
-        }
-
-        public string cenaBronSp
-        {
-            get { return bronCS; }
-            set { bronCS = value; }
-        }
-
-        public string cenaChlebSp
-        {
-            get { return chlebCS; }
-            set { chlebCS = value; }
-        }
-
-        public string cenaDrewSp
-        {
-            get { return drewCS; }
-            set { drewCS = value; }
-        }
-
-        public string cenaJablSp
-        {
-            get { return jablCS; }
-            set { jablCS = value; }
-        }
-
-        public string cenaMiesSp
-        {
-            get { return miesoCS; }
-            set { miesoCS = value; }
-        }
-
-        public string cenaPerlSp
-        {
-            get { return perlCS; }
-            set { perlCS = value; }
-        }
-
-        public string cenaSkorSp
-        {
-            get { return skrCS; }
-            set { skrCS = value; }
-        }
-
-        public string cenaAlchSp
-        {
-            get { return alchCS; }
-            set { alchCS = value; }
-        }
-
-        public string cenaPrzypSp
-        {
-            get { return przypCS; }
-            set { przypCS = value; }
-        }
-
-        public string cenaTkanKup
-        {
-            get { return tkanCK; }
-            set { tkanCK = value; }
-        }
-
-        public string cenaWinoKup
-        {
-            get { return winoCK; }
-            set { winoCK = value; }
-        }
-
-        public string cenaBronKup
-        {
-            get { return bronCK; }
-            set { bronCK = value; }
-        }
-
-        public string cenaChlebKup
-        {
-            get { return chlebCK; }
-            set { chlebCK = value; }
-        }
-
-        public string cenaDrewKup
-        {
-            get { return drewCK; }
-            set { drewCK = value; }
-        }
-
-        public string cenaJablKup
-        {
-            get { return jablCK; }
-            set { jablCK = value; }
-        }
-
-        public string cenaMiesKup
-        {
-            get { return miesoCK; }
-            set { miesoCK = value; }
-        }
-
-        public string cenaPerlKup
-        {
-            get { return perlCK; }
-            set { perlCK = value; }
-        }
-
-        public string cenaSkorKup
-        {
-            get { return skrCK; }
-            set { skrCK = value; }
-        }
-
-        public string cenaAlchKup
-        {
-            get { return alchCK; }
-            set { alchCK = value; }
-        }
-
-        public string cenaPrzypKup
-        {
-            get { return przypCK; }
-            set { przypCK = value; }
-        }
         
-
-        //ważne-inicjalizacja jeśli texbox ma wyświetlać coś co nie jest z góry przypisane, trzeba go tu zainicjalizować
         public Zakupy(string a)
         {
             idk = a;
-            InitializeComponent();           
-            nowy1.DataContext = this;
-            zassaj();
+            InitializeComponent();       
+            odswiez();
         }
 
-        //w te funkcje należy wkleić kod od kamila
-        //WAŻNE-przed faktyczną wymianą należy sprawdzić czy ilość towaru i kasa sie zgadzają-by nie było ujemnych towarów w mieście
-        //Muszą także zmieniać wyświetlana ilość towaru (nie wiem czy zmiana w bazie danych starczy-być może trzeba dodatkowo tu zmienić wartości w liście cen i ilości)
+        public void odswiez()
+        {
+            idm = przekaznik.lok(idk);
+            dane = new ceny(idm);
+            string tmp;
+
+            tkaninaKarawana.Text = przekaznik.IleTowaru(idk, "TO03");
+            tkaninaMiasto.Text = dane.getIle("TO03");
+            tmp = dane.getCenaKup("TO03");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            tkaninaKupno.Text = tmp;
+            tkaninaSprzedarz.Text = dane.getCenaSp("TO03");
+
+            winoKarawana.Text = przekaznik.IleTowaru(idk, "TO09");
+            winoMiasto.Text = dane.getIle("TO09");
+            tmp = dane.getCenaKup("TO09");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            winoKupno.Text = tmp;
+            winoSprzedarz.Text = dane.getCenaSp("TO09");
+
+            bronKarawana.Text = przekaznik.IleTowaru(idk, "TO06");
+            bronMiasto.Text = dane.getIle("TO06");
+            tmp = dane.getCenaKup("TO06");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            bronKupno.Text = tmp;
+            bronSprzedarz.Text = dane.getCenaSp("TO06");
+
+            chlebKarawana.Text = przekaznik.IleTowaru(idk, "TO05");
+            chlebMiasto.Text = dane.getIle("TO05");
+            tmp = dane.getCenaKup("TO05");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            chlebKupno.Text = tmp;
+            chlebSprzedarz.Text = dane.getCenaSp("TO05");
+
+            drewnoKarawana.Text = przekaznik.IleTowaru(idk, "TO01");
+            drewnoMiasto.Text = dane.getIle("TO01");
+            tmp = dane.getCenaKup("TO01");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            drewnoKupno.Text = tmp;
+            drewnoSprzedarz.Text = dane.getCenaSp("TO01");
+
+            jablkoKarawana.Text = przekaznik.IleTowaru(idk, "TO02");
+            jablkoMiasto.Text = dane.getIle("TO02");
+            tmp = dane.getCenaKup("TO02");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            jablkoKupno.Text = tmp;
+            jablkoSprzedarz.Text = dane.getCenaSp("TO02");
+
+            miesoKarawana.Text = przekaznik.IleTowaru(idk, "TO04");
+            miesoMiasto.Text = dane.getIle("TO04");
+            tmp = dane.getCenaKup("TO04");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            miesoKupno.Text = tmp;
+            miesoSprzedarz.Text = dane.getCenaSp("TO04");
+
+            perlaKarawana.Text = przekaznik.IleTowaru(idk, "TO07");
+            perlaMiasto.Text = dane.getIle("TO07");
+            tmp = dane.getCenaKup("TO07");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            perlaKupno.Text = tmp;
+            perlaSprzedarz.Text = dane.getCenaSp("TO07");
+
+            skoraKarawana.Text = przekaznik.IleTowaru(idk, "TO10");
+            skoraMiasto.Text = dane.getIle("TO10");
+            tmp = dane.getCenaKup("TO10");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            skoraKupno.Text = tmp;
+            skoraSprzedarz.Text = dane.getCenaSp("TO10");
+
+            alchemiaKarawana.Text = przekaznik.IleTowaru(idk, "TO11");
+            alchemiaMiasto.Text = dane.getIle("TO11");
+            tmp = dane.getCenaKup("TO11");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            alchemiaKupno.Text = tmp;
+            alchemiaSprzedarz.Text = dane.getCenaSp("TO11");
+
+            przyprawyKarawana.Text = przekaznik.IleTowaru(idk, "TO08");
+            przyprawyMiasto.Text = dane.getIle("TO08");
+            tmp = dane.getCenaKup("TO08");
+            if (tmp == "-1") { tmp = "niemożliwe"; }
+            przyprawyKupno.Text = tmp;
+            przyprawySprzedarz.Text = dane.getCenaSp("TO08");
+            
+        }
+
+
         private void sprzedaz(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena) {
             string mess = handel.sprzedaj(IDkarawana, IDmiasto, IDtowar, ile, cena);
             if (mess == "done")
             {
-                zassaj();
+                odswiez();
                 MainWindow.odzwierzGlowne();
             }
             else
@@ -510,7 +134,7 @@ namespace Caravans
             string mess = handel.kup(IDkarawana, IDmiasto, IDtowar, ile, cena);
             if (mess == "done")
             {
-                zassaj();
+                odswiez();
                 MainWindow.odzwierzGlowne();
             }
             else
@@ -530,7 +154,7 @@ namespace Caravans
         private void buttonT1_Click(object sender, RoutedEventArgs e)//tkanina sprzedaj
         {
             int ile = Convert.ToInt32(tkan.Text);
-            int cena = Convert.ToInt32(tkanCS);
+            int cena = Convert.ToInt32(tkaninaSprzedarz.Text);
             sprzedaz(idk, idm, "TO03", ile, cena);
         }
 
@@ -546,13 +170,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(tkan.Text);
             int cena;
-            if (tkanCK == "niemożliwe")
+            string tmp = tkaninaKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(tkanCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO03", ile, cena);
         }
@@ -568,7 +193,7 @@ namespace Caravans
         private void buttonW1_Click(object sender, RoutedEventArgs e)//wino sprzedaj
         {
             int ile = Convert.ToInt32(wino.Text);
-            int cena = Convert.ToInt32(winoCS);
+            int cena = Convert.ToInt32(winoSprzedarz.Text);
             sprzedaz(idk, idm, "TO09", ile, cena);
         }
 
@@ -584,13 +209,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(wino.Text);
             int cena;
-            if (winoCK == "niemożliwe")
+            string tmp = winoKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(winoCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO09", ile, cena);
         }
@@ -606,7 +232,7 @@ namespace Caravans
         private void buttonB1_Click(object sender, RoutedEventArgs e)//bron sprzedaj
         {
             int ile = Convert.ToInt32(bron.Text);
-            int cena = Convert.ToInt32(bronCS);
+            int cena = Convert.ToInt32(bronSprzedarz.Text);
             sprzedaz(idk, idm, "TO06", ile, cena);
         }
 
@@ -622,13 +248,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(bron.Text);
             int cena;
-            if (bronCK == "niemożliwe")
+            string tmp = bronKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(bronCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO06", ile, cena);
         }
@@ -644,7 +271,7 @@ namespace Caravans
         private void buttonC1_Click(object sender, RoutedEventArgs e)//chleb sprzedaj
         {
             int ile = Convert.ToInt32(hleb.Text);
-            int cena = Convert.ToInt32(chlebCS);
+            int cena = Convert.ToInt32(chlebSprzedarz.Text);
             sprzedaz(idk, idm, "TO05", ile, cena);
         }
 
@@ -660,13 +287,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(hleb.Text);
             int cena;
-            if (chlebCK == "niemożliwe")
+            string tmp = chlebKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(chlebCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO05", ile, cena);
         }
@@ -682,7 +310,7 @@ namespace Caravans
         private void buttonD1_Click(object sender, RoutedEventArgs e)//drewno sprzedaj
         {
             int ile = Convert.ToInt32(brondrz.Text);
-            int cena = Convert.ToInt32(drewCS);
+            int cena = Convert.ToInt32(drewnoSprzedarz.Text);
             sprzedaz(idk, idm, "TO01", ile, cena);
         }
 
@@ -698,13 +326,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(brondrz.Text);
             int cena;
-            if (drewCK == "niemożliwe")
+            string tmp = drewnoKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(drewCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO01", ile, cena);
         }
@@ -720,7 +349,7 @@ namespace Caravans
         private void buttonJ1_Click(object sender, RoutedEventArgs e)//jabłko sprzedaj
         {
             int ile = Convert.ToInt32(jabl.Text);
-            int cena = Convert.ToInt32(jablCS);
+            int cena = Convert.ToInt32(jablkoSprzedarz.Text);
             sprzedaz(idk, idm, "TO02", ile, cena);
         }
 
@@ -736,13 +365,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(jabl.Text);
             int cena;
-            if (jablCK == "niemożliwe")
+            string tmp = jablkoKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(jablCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO02", ile, cena);
         }
@@ -758,7 +388,7 @@ namespace Caravans
         private void buttonM1_Click(object sender, RoutedEventArgs e)//mięso sprzedaj
         {
             int ile = Convert.ToInt32(mies.Text);
-            int cena = Convert.ToInt32(miesoCS);
+            int cena = Convert.ToInt32(miesoSprzedarz.Text);
             sprzedaz(idk, idm, "TO04", ile, cena);
         }
 
@@ -774,13 +404,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(mies.Text);
             int cena;
-            if (miesoCK == "niemożliwe")
+            string tmp = miesoKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(miesoCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO04", ile, cena);
         }
@@ -796,7 +427,7 @@ namespace Caravans
         private void buttonP1_Click(object sender, RoutedEventArgs e)//perła sprzedaj
         {
             int ile = Convert.ToInt32(perl.Text);
-            int cena = Convert.ToInt32(perlCS);
+            int cena = Convert.ToInt32(perlaSprzedarz.Text);
             sprzedaz(idk, idm, "TO07", ile, cena);
         }
 
@@ -812,13 +443,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(perl.Text);
             int cena;
-            if (perlCK == "niemożliwe")
+            string tmp = perlaKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(perlCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO07", ile, cena);
         }
@@ -834,7 +466,7 @@ namespace Caravans
         private void buttonS1_Click(object sender, RoutedEventArgs e)//skóra sprzedaj
         {
             int ile = Convert.ToInt32(skur.Text);
-            int cena = Convert.ToInt32(skrCS);
+            int cena = Convert.ToInt32(skoraSprzedarz.Text);
             sprzedaz(idk, idm, "TO10", ile, cena);
         }
 
@@ -850,13 +482,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(skur.Text);
             int cena;
-            if (skrCK == "niemożliwe")
+            string tmp = skoraKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(skrCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO10", ile, cena);
         }
@@ -872,7 +505,7 @@ namespace Caravans
         private void buttonA1_Click(object sender, RoutedEventArgs e)//alchemia sprzedaj
         {
             int ile = Convert.ToInt32(srodki.Text);
-            int cena = Convert.ToInt32(alchCS);
+            int cena = Convert.ToInt32(alchemiaSprzedarz.Text);
             sprzedaz(idk, idm, "TO11", ile, cena);
         }
 
@@ -888,13 +521,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(srodki.Text);
             int cena;
-            if (alchCK == "niemożliwe")
+            string tmp = alchemiaKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(alchCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO11", ile, cena);
         }
@@ -910,7 +544,7 @@ namespace Caravans
         private void buttonX1_Click(object sender, RoutedEventArgs e)//przyprawy sprzedaj
         {
             int ile = Convert.ToInt32(przyp.Text);
-            int cena = Convert.ToInt32(przypCS);
+            int cena = Convert.ToInt32(przyprawySprzedarz.Text);
             sprzedaz(idk, idm, "TO08", ile, cena);
         }
 
@@ -926,13 +560,14 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(przyp.Text);
             int cena;
-            if (przypCK == "niemożliwe")
+            string tmp = przyprawyKupno.Text;
+            if (tmp == "niemożliwe")
             {
                 cena = -1;
             }
             else
             {
-                cena = Convert.ToInt32(przypCK);
+                cena = Convert.ToInt32(tmp);
             }
             kupowanie(idk, idm, "TO08", ile, cena);
         }
