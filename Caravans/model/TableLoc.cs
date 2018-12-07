@@ -18,8 +18,6 @@ namespace Caravans.model
             this.Name = Name;
         }
 
-        //gety
-
         public string GetId()
         {
             return this.Id;
@@ -29,8 +27,6 @@ namespace Caravans.model
         {
             return this.Name;
         }
-
-        //sety
 
         public void SetId(string Id)
         {

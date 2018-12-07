@@ -48,8 +48,6 @@ namespace Caravans.model
             return this.Quality;
         }
 
-        //Sety
-
         public void SetId(string Id)
         {
             this.Id = Id;

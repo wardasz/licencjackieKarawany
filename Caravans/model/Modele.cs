@@ -108,21 +108,97 @@ namespace Caravans.model
             time = a;
         }
 
-        public static String Nazwalokacji()
+        public static TableLoc ZnajdzLokacje(string id)
         {
-            string nazwa ="";
-            foreach (TableCaravan x in tableCaravan)
+            foreach(TableLoc lokacja in tableLoc)
             {
-                foreach (TableTown y in tableTown)
-                {
-                    if(x.GetIdLoc() == y.GetIdLoc())
-                    {
-                        nazwa = y.GetName();
-                    }
-                }
+                if (lokacja.GetId() == id) { return lokacja; }
             }
-            return nazwa;
+            return null;
         }
+
+        public static TableArticle ZnajdzTowar(string id)
+        {
+            foreach (TableArticle towar in tableArticle)
+            {
+                if (towar.GetId() == id) { return towar; }
+            }
+            return null;
+        }
+
+        public static TableState ZnajdzStan(string id)
+        {
+            foreach (TableState stan in tableState)
+            {
+                if (stan.GetId() == id) { return stan; }
+            }
+            return null;
+        }
+
+        public static TableRoad ZnajdzDroge(string id)
+        {
+            foreach (TableRoad droga in tableRoad)
+            {
+                if (droga.GetId() == id) { return droga; }
+            }
+            return null;
+        }
+
+        public static TableRoad ZnajdzDroge(string id1, string id2)
+        {
+            foreach (TableRoad droga in tableRoad)
+            {
+                if (droga.GetIdLoc_1() == id1 && droga.GetIdLoc_2() == id2) { return droga; }
+                if (droga.GetIdLoc_1() == id2 && droga.GetIdLoc_2() == id1) { return droga; }
+            }
+            return null;
+        }
+
+        public static TableTown ZnajdzMiasto(string id)
+        {
+            foreach (TableTown miasto in tableTown)
+            {
+                if (miasto.GetId() == id) { return miasto; }
+            }
+            return null;
+        }
+
+        public static TableTownState ZnajdzStanMiasta(string id)
+        {
+            foreach (TableTownState stan in tableTownState)
+            {
+                if (stan.GetId() == id) { return stan; }
+            }
+            return null;
+        }
+
+        public static TableCaravan ZnajdzKarawane(string id)
+        {
+            foreach (TableCaravan miasto in tableCaravan)
+            {
+                if (miasto.GetId() == id) { return miasto; }
+            }
+            return null;
+        }
+
+        public static TableArtInCaravan ZnajdzTowarWKarawanie(string idt, string idk)
+        {
+            foreach (TableArtInCaravan towar in tableArtInCaravan)
+            {
+                if (towar.GetIdArticle() == idt && towar.GetId() == idk) { return towar; }
+            }
+            return null;
+        }
+
+        public static TableArtInTown ZnajdzTowarWMiescie(string idt, string idm)
+        {
+            foreach (TableArtInTown towar in tableArtInTown)
+            {
+                if (towar.GetIdArticle() == idt && towar.GetId() == idm) { return towar; }
+            }
+            return null;
+        }
+
 
         public static void dodajKarawane(string a, string b)
         {

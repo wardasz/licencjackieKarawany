@@ -23,8 +23,6 @@ namespace Caravans.model
             this.Requisition = Requisition;
         }
 
-        //GETs
-
         public string GetId()
         {
             return this.Id;
@@ -49,8 +47,6 @@ namespace Caravans.model
         {
             return this.Requisition;
         }
-
-        //SETs
 
         public void SetId(string Id)
         {

@@ -19,8 +19,6 @@ namespace Caravans.model
             this.Duration = Duration;
         }
 
-        //gety
-
         public string GetId()
         {
             return this.Id;
@@ -35,8 +33,6 @@ namespace Caravans.model
         {
             return this.Duration;
         }
-
-        //Set
 
         public void SetId(string Id)
         {

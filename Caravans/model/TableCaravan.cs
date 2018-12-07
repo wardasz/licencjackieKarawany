@@ -55,8 +55,6 @@ namespace Caravans.model
             return this.Minions;
         }
 
-        //Sety
-
         public void SetId(string Id)
         {
             this.Id = Id;
@@ -76,8 +74,10 @@ namespace Caravans.model
         {
             this.Guard = Guard;
         }
-
-        //inne
+        public void SetMinions(int Minions)
+        {
+            this.Minions = Minions;
+        }
 
         public void ChangeDuration()
         {
@@ -86,20 +86,14 @@ namespace Caravans.model
                 this.Duration--;
             }
         }
+        public void ChangeDuration(int zmienna)
+        {
+            this.Duration = zmienna;
+        }
 
         public void BackDuration()
         {
             this.Duration++;
-        }
-
-        public void ChangeDuration(int zmienna)
-        {
-                this.Duration = zmienna;
-        }
-
-        public void SetMinions(int Minions)
-        {
-            this.Minions = Minions;
         }
     }
 }

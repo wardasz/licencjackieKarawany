@@ -20,8 +20,6 @@ namespace Caravans.model
             this.Description = Description;
         }
 
-        //gety
-
         public string GetId()
         {
             return this.Id;
@@ -37,8 +35,6 @@ namespace Caravans.model
             return this.Description;
         }
 
-        //sety
-
         public void SetId(string Id)
         {
             this.Id = Id;
@@ -53,6 +49,5 @@ namespace Caravans.model
         {
             this.Description = Description;
         }
-
     }
 }

@@ -62,8 +62,6 @@ namespace Caravans.model
             return this.Food;
         }
 
-        //Sety
-
         public void SetId(string Id)
         {
             this.Id = Id;

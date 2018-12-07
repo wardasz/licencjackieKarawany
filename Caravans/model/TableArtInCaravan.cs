@@ -34,8 +34,6 @@ namespace Caravans.model
             return this.Number;
         }
 
-        //Set
-
         public void SetId(string Id)
         {
             this.Id = Id;

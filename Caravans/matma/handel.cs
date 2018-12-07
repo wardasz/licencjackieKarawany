@@ -14,66 +14,31 @@ namespace Caravans.matma
         {
             int pojemnosc = przekaznik.PoliczPojemnosc(IDkarawana);
             int obciazenie = przekaznik.PoliczObciozenie(IDkarawana);
-            int ileWMiescie = 0;
-            foreach (TableArtInTown towar in Modele.tableArtInTown)
-            {
-                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
-                {
-                    ileWMiescie = towar.GetNumber();
-                }
-            }
+            TableArtInTown towarMiasto = Modele.ZnajdzTowarWMiescie(IDtowar, IDmiasto);
+            TableArtInCaravan towarKarawana = Modele.ZnajdzTowarWKarawanie(IDtowar, IDkarawana);
 
             if (cena == -1) { return "Ten towar nie jest na sprzedarz"; }
-            if (ileWMiescie<ile) { return "Chcesz kupić więcej towaru niż jest w mieście"; }
+            if (towarMiasto.GetNumber()<ile) { return "Chcesz kupić więcej towaru niż jest w mieście"; }
             int dostepnaMasa = pojemnosc - obciazenie;
             if (dostepnaMasa < ile) { return "Tyle towaru nie zmieści się w naszej karawanie"; }
             int kwota = ile * cena;
             if (kwota> Modele.getGold()) { return "Nie masz dość złota!"; }
 
-            foreach (TableArtInTown towar in Modele.tableArtInTown)
-            {
-                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
-                {
-                    towar.SetNumber(towar.GetNumber() - ile);
-                }
-            }
-            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
-            {
-                if(towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana)
-                {
-                    towar.SetNumber(towar.GetNumber() + ile);
-                }
-            }
+            towarMiasto.SetNumber(towarMiasto.GetNumber()-ile);
+            towarKarawana.SetNumber(towarKarawana.GetNumber() + ile);
             Modele.setGold(Modele.getGold() - kwota);
             return "done";
         }
 
         public static string sprzedaj(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena)
         {
-            int ileWKarawanie = 0;
-            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
-            {
-                if (towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana) {
-                    ileWKarawanie = towar.GetNumber();
-                }
-            }
+            TableArtInTown towarMiasto = Modele.ZnajdzTowarWMiescie(IDtowar, IDmiasto);
+            TableArtInCaravan towarKarawana = Modele.ZnajdzTowarWKarawanie(IDtowar, IDkarawana);
 
-            if (ileWKarawanie < ile) { return "Nie masz dość towaru na wozach"; }
+            if (towarKarawana.GetNumber() < ile) { return "Nie masz dość towaru na wozach"; }
 
-            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
-            {
-                if (towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana)
-                {
-                    towar.SetNumber(towar.GetNumber()-ile);
-                }
-            }
-            foreach (TableArtInTown towar in Modele.tableArtInTown)
-            {
-                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
-                {
-                    towar.SetNumber(towar.GetNumber() - ile);
-                }
-            }
+            towarMiasto.SetNumber(towarMiasto.GetNumber() + ile);
+            towarKarawana.SetNumber(towarKarawana.GetNumber() - ile);
             Modele.setGold(Modele.getGold() + cena * ile);
             return "done";         
         }
