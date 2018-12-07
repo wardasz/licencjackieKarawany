@@ -12,82 +12,70 @@ namespace Caravans.matma
 
         public static string kup(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena)
         {
-            if (ile > 0 && cena > 0)
+            int pojemnosc = przekaznik.PoliczPojemnosc(IDkarawana);
+            int obciazenie = przekaznik.PoliczObciozenie(IDkarawana);
+            int ileWMiescie = 0;
+            foreach (TableArtInTown towar in Modele.tableArtInTown)
             {
-                if (cena * ile <= Modele.getGold())
+                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
                 {
-                    foreach (TableArtInCaravan y in Modele.tableArtInCaravan)
-                    {
-                        if (y.GetIdArticle() == IDtowar && y.GetId() == IDkarawana)
-                        {
-                            foreach (TableArtInTown z in Modele.tableArtInTown)
-                            {
-                                if (z.GetId() == IDmiasto && z.GetIdArticle() == IDtowar)
-                                {
-                                    int pojemnosc = przekaznik.PoliczPojemnosc(IDkarawana);
-                                    int obciazenie = przekaznik.PoliczObciozenie(IDkarawana);
-                                    if (pojemnosc >= obciazenie+ile)
-                                    {
-                                        if (ile <= z.GetNumber())
-                                        {
-                                            Modele.setGold(Modele.getGold() - cena * ile);
-                                            y.SetNumber(y.GetNumber() + ile);
-                                            z.SetNumber(z.GetNumber() - ile);
-                                        }
-                                        else
-                                        {
-                                            return "Brak/za mało towaru w miescie!"; //gdy sie prosi o wiecej niz w miescie jest dostepne
-                                        }
-                                    }
-                                    else
-                                    {
-                                        return "Zbyt mała pojemnosc karawany!";
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                    return "Za mało złota!";
+                    ileWMiescie = towar.GetNumber();
                 }
             }
-            else
+
+            if (cena == -1) { return "Ten towar nie jest na sprzedarz"; }
+            if (ileWMiescie<ile) { return "Chcesz kupić więcej towaru niż jest w mieście"; }
+            int dostepnaMasa = pojemnosc - obciazenie;
+            if (dostepnaMasa < ile) { return "Tyle towaru nie zmieści się w naszej karawanie"; }
+            int kwota = ile * cena;
+            if (kwota> Modele.getGold()) { return "Nie masz dość złota!"; }
+
+            foreach (TableArtInTown towar in Modele.tableArtInTown)
             {
-                return "Ten towar nie jest na sprzedaż";// gdy towar ma status niemozliwe
+                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
+                {
+                    towar.SetNumber(towar.GetNumber() - ile);
+                }
             }
+            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
+            {
+                if(towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana)
+                {
+                    towar.SetNumber(towar.GetNumber() + ile);
+                }
+            }
+            Modele.setGold(Modele.getGold() - kwota);
             return "done";
         }
 
         public static string sprzedaj(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena)
         {
-            if (ile > 0)
+            int ileWKarawanie = 0;
+            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
             {
-                foreach (TableArtInCaravan y in Modele.tableArtInCaravan)
-                {
-                    if (y.GetIdArticle() == IDtowar && y.GetId() == IDkarawana)
-                    {
-                        if (ile <= y.GetNumber())
-                        {
-                            foreach (TableArtInTown z in Modele.tableArtInTown)
-                            {
-                                if (z.GetId() == IDmiasto && z.GetIdArticle() == IDtowar)
-                                {
-                                    Modele.setGold(Modele.getGold() + cena * ile);
-                                    y.SetNumber(y.GetNumber() - ile);
-                                    z.SetNumber(z.GetNumber() + ile);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            return "Niewystarczajaca ilosc towaru w karawanie!";
-                        }
-                    }
-                }              
+                if (towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana) {
+                    ileWKarawanie = towar.GetNumber();
+                }
             }
-            return "done";
+
+            if (ileWKarawanie < ile) { return "Nie masz dość towaru na wozach"; }
+
+            foreach (TableArtInCaravan towar in Modele.tableArtInCaravan)
+            {
+                if (towar.GetIdArticle() == IDtowar && towar.GetId() == IDkarawana)
+                {
+                    towar.SetNumber(towar.GetNumber()-ile);
+                }
+            }
+            foreach (TableArtInTown towar in Modele.tableArtInTown)
+            {
+                if (towar.GetId() == IDmiasto && towar.GetIdArticle() == IDtowar)
+                {
+                    towar.SetNumber(towar.GetNumber() - ile);
+                }
+            }
+            Modele.setGold(Modele.getGold() + cena * ile);
+            return "done";         
         }
     }
 }
