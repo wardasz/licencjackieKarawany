@@ -110,93 +110,62 @@ namespace Caravans.model
 
         public static TableLoc ZnajdzLokacje(string id)
         {
-            foreach(TableLoc lokacja in tableLoc)
-            {
-                if (lokacja.GetId() == id) { return lokacja; }
-            }
-            return null;
+            TableLoc lokacja = tableLoc.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return lokacja;
         }
 
         public static TableArticle ZnajdzTowar(string id)
         {
-            foreach (TableArticle towar in tableArticle)
-            {
-                if (towar.GetId() == id) { return towar; }
-            }
-            return null;
+            TableArticle towar = tableArticle.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return towar;
         }
 
         public static TableState ZnajdzStan(string id)
         {
-            foreach (TableState stan in tableState)
-            {
-                if (stan.GetId() == id) { return stan; }
-            }
-            return null;
+            TableState stan = tableState.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return stan;
         }
 
         public static TableRoad ZnajdzDroge(string id)
         {
-            foreach (TableRoad droga in tableRoad)
-            {
-                if (droga.GetId() == id) { return droga; }
-            }
-            return null;
+            TableRoad droga = tableRoad.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return droga;
         }
 
         public static TableRoad ZnajdzDroge(string id1, string id2)
         {
-            foreach (TableRoad droga in tableRoad)
-            {
-                if (droga.GetIdLoc_1() == id1 && droga.GetIdLoc_2() == id2) { return droga; }
-                if (droga.GetIdLoc_1() == id2 && droga.GetIdLoc_2() == id1) { return droga; }
-            }
-            return null;
+            TableRoad droga = tableRoad.Select(n => n).Where(x => (x.GetIdLoc_1() == id1 && x.GetIdLoc_2() == id2) || (x.GetIdLoc_1() == id2 && x.GetIdLoc_2() == id1)).FirstOrDefault();
+            return droga;
         }
 
         public static TableTown ZnajdzMiasto(string id)
         {
-            foreach (TableTown miasto in tableTown)
-            {
-                if (miasto.GetId() == id) { return miasto; }
-            }
-            return null;
+            TableTown miasto = tableTown.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return miasto;
         }
 
-        public static TableTownState ZnajdzStanMiasta(string id)
+        public static TableTownState ZnajdzStanMiasta(string idm, string ids)
         {
-            foreach (TableTownState stan in tableTownState)
-            {
-                if (stan.GetId() == id) { return stan; }
-            }
-            return null;
+            TableTownState stan = tableTownState.Select(n => n).Where(x => x.GetId() == idm && x.GetIdState()==ids).FirstOrDefault();
+            return stan;
         }
 
         public static TableCaravan ZnajdzKarawane(string id)
         {
-            foreach (TableCaravan miasto in tableCaravan)
-            {
-                if (miasto.GetId() == id) { return miasto; }
-            }
-            return null;
+            TableCaravan karawana = tableCaravan.Select(n => n).Where(x => x.GetId() == id).FirstOrDefault();
+            return karawana;
         }
 
         public static TableArtInCaravan ZnajdzTowarWKarawanie(string idt, string idk)
         {
-            foreach (TableArtInCaravan towar in tableArtInCaravan)
-            {
-                if (towar.GetIdArticle() == idt && towar.GetId() == idk) { return towar; }
-            }
-            return null;
+            TableArtInCaravan towar = tableArtInCaravan.Select(n => n).Where(x => x.GetId() == idk && x.GetIdArticle()==idt).FirstOrDefault();
+            return towar;
         }
 
         public static TableArtInTown ZnajdzTowarWMiescie(string idt, string idm)
         {
-            foreach (TableArtInTown towar in tableArtInTown)
-            {
-                if (towar.GetIdArticle() == idt && towar.GetId() == idm) { return towar; }
-            }
-            return null;
+            TableArtInTown towar = tableArtInTown.Select(n => n).Where(x => x.GetId() == idm && x.GetIdArticle()==idt).FirstOrDefault();
+            return towar;
         }
 
 
