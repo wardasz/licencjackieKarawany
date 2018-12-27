@@ -46,27 +46,16 @@ namespace Caravans.matma
             return x;
         }
 
-        public static string IleTowaru(string idk, string idt)
+        public static int IleTowaruMiasto(string idm, string idt)
         {
-            string wynik = "";
-            foreach (TableArtInCaravan xyz in Modele.tableArtInCaravan)
-            {
-                string id1 = xyz.GetId();
-                string id2 = xyz.GetIdArticle();
-                if (id1 == idk && id2 == idt)
-                {
-                    int zmienna = xyz.GetNumber();
-                    if (zmienna == 0)
-                    {
-                        wynik = "0";
-                    }
-                    else
-                    {
-                        wynik = zmienna.ToString();
-                    }
-                }
-            }
-            return wynik;
+            TableArtInTown towar = Modele.ZnajdzTowarWMiescie(idt, idm);
+            return towar.GetNumber();
+        }
+
+        public static int IleTowaruKarawana(string idk, string idt)
+        {
+            TableArtInCaravan towar = Modele.ZnajdzTowarWKarawanie(idt, idk);
+            return towar.GetNumber();
         }
 
         //oddaje stringa do wydrukowania w oknie karawany

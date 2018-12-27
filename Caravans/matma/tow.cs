@@ -50,7 +50,7 @@ namespace Caravans.matma
             populacja = miasto.GetPopulation();
 
             cenaKup = 0;
-            cenaDef = 0;
+            cenaSp = 0;
             prodAkt = 0;
             zapoAkt = 0;
         }

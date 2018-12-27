@@ -79,7 +79,6 @@
     <Compile Include="Errors.xaml.cs">
       <DependentUpon>Errors.xaml</DependentUpon>
     </Compile>
-    <Compile Include="matma\ceny.cs" />
     <Compile Include="matma\czas.cs" />
     <Compile Include="matma\gra.cs" />
     <Compile Include="matma\handel.cs" />

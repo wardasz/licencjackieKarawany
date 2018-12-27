@@ -21,126 +21,247 @@ namespace Caravans
     {
         private static string idk;
         private static string idm;
-
-        private static ceny dane;
         
         public Zakupy(string a)
         {
             idk = a;
+            idm = przekaznik.lok(idk);
             InitializeComponent();       
             odswiez();
         }
 
         public void odswiez()
         {
-            idm = przekaznik.lok(idk);
-            dane = new ceny(idm);
-            string tmp;
-
-            tkaninaKarawana.Text = przekaznik.IleTowaru(idk, "TO03");
-            tkaninaMiasto.Text = dane.getIle("TO03");
-            tmp = dane.getCenaKup("TO03");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            tkaninaKupno.Text = tmp;
-            tkaninaSprzedarz.Text = dane.getCenaSp("TO03");
-
-            winoKarawana.Text = przekaznik.IleTowaru(idk, "TO09");
-            winoMiasto.Text = dane.getIle("TO09");
-            tmp = dane.getCenaKup("TO09");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            winoKupno.Text = tmp;
-            winoSprzedarz.Text = dane.getCenaSp("TO09");
-
-            bronKarawana.Text = przekaznik.IleTowaru(idk, "TO06");
-            bronMiasto.Text = dane.getIle("TO06");
-            tmp = dane.getCenaKup("TO06");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            bronKupno.Text = tmp;
-            bronSprzedarz.Text = dane.getCenaSp("TO06");
-
-            chlebKarawana.Text = przekaznik.IleTowaru(idk, "TO05");
-            chlebMiasto.Text = dane.getIle("TO05");
-            tmp = dane.getCenaKup("TO05");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            chlebKupno.Text = tmp;
-            chlebSprzedarz.Text = dane.getCenaSp("TO05");
-
-            drewnoKarawana.Text = przekaznik.IleTowaru(idk, "TO01");
-            drewnoMiasto.Text = dane.getIle("TO01");
-            tmp = dane.getCenaKup("TO01");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            drewnoKupno.Text = tmp;
-            drewnoSprzedarz.Text = dane.getCenaSp("TO01");
-
-            jablkoKarawana.Text = przekaznik.IleTowaru(idk, "TO02");
-            jablkoMiasto.Text = dane.getIle("TO02");
-            tmp = dane.getCenaKup("TO02");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            jablkoKupno.Text = tmp;
-            jablkoSprzedarz.Text = dane.getCenaSp("TO02");
-
-            miesoKarawana.Text = przekaznik.IleTowaru(idk, "TO04");
-            miesoMiasto.Text = dane.getIle("TO04");
-            tmp = dane.getCenaKup("TO04");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            miesoKupno.Text = tmp;
-            miesoSprzedarz.Text = dane.getCenaSp("TO04");
-
-            perlaKarawana.Text = przekaznik.IleTowaru(idk, "TO07");
-            perlaMiasto.Text = dane.getIle("TO07");
-            tmp = dane.getCenaKup("TO07");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            perlaKupno.Text = tmp;
-            perlaSprzedarz.Text = dane.getCenaSp("TO07");
-
-            skoraKarawana.Text = przekaznik.IleTowaru(idk, "TO10");
-            skoraMiasto.Text = dane.getIle("TO10");
-            tmp = dane.getCenaKup("TO10");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            skoraKupno.Text = tmp;
-            skoraSprzedarz.Text = dane.getCenaSp("TO10");
-
-            alchemiaKarawana.Text = przekaznik.IleTowaru(idk, "TO11");
-            alchemiaMiasto.Text = dane.getIle("TO11");
-            tmp = dane.getCenaKup("TO11");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            alchemiaKupno.Text = tmp;
-            alchemiaSprzedarz.Text = dane.getCenaSp("TO11");
-
-            przyprawyKarawana.Text = przekaznik.IleTowaru(idk, "TO08");
-            przyprawyMiasto.Text = dane.getIle("TO08");
-            tmp = dane.getCenaKup("TO08");
-            if (tmp == "-1") { tmp = "niemożliwe"; }
-            przyprawyKupno.Text = tmp;
-            przyprawySprzedarz.Text = dane.getCenaSp("TO08");
-            
+            odswiezWino();
+            odswiezAlchemie();
+            odswiezBron();
+            odswiezChleb();
+            odswiezDrewno();
+            odswiezJablko();
+            odswiezMieso();
+            odswiezPerle();
+            odswiezPrzyprawe();
+            odswiezSkory();
+            odswiezTkanine();
         }
 
+        public void odswiezDrewno()
+        {
+            drewnoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO01").ToString();
+            drewnoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO01").ToString();
+            tow tmp = new tow("TO01", idm);
+            tmp.policzCena();
+            drewnoSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                drewnoKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                drewnoKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezMieso()
+        {
+            miesoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO04").ToString();
+            miesoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO04").ToString();
+            tow tmp = new tow("TO04", idm);
+            tmp.policzCena();
+            miesoSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                miesoKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                miesoKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezChleb()
+        {
+            chlebKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO05").ToString();
+            chlebMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO05").ToString();
+            tow tmp = new tow("TO05", idm);
+            tmp.policzCena();
+            chlebSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                chlebKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                chlebKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezJablko()
+        {
+            jablkoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO02").ToString();
+            jablkoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO02").ToString();
+            tow tmp = new tow("TO02", idm);
+            tmp.policzCena();
+            jablkoSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                jablkoKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                jablkoKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezBron()
+        {
+            bronKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO06").ToString();
+            bronMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO06").ToString();
+            tow tmp = new tow("TO06", idm);
+            tmp.policzCena();
+            bronSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                bronKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                bronKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezWino()
+        {
+            winoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO09").ToString();
+            winoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO09").ToString();
+            tow tmp = new tow("TO09", idm);
+            tmp.policzCena();
+            winoSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                winoKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                winoKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezAlchemie()
+        {
+            alchemiaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO11").ToString();
+            alchemiaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO11").ToString();
+            tow tmp = new tow("TO11", idm);
+            tmp.policzCena();
+            alchemiaSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                alchemiaKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                alchemiaKupno.Text = x.ToString();
+            }
 
-        private void sprzedaz(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena) {
+        }
+        public void odswiezPrzyprawe()
+        {
+            przyprawyKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO08").ToString();
+            przyprawyMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO08").ToString();
+            tow tmp = new tow("TO08", idm);
+            tmp.policzCena();
+            przyprawySprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                przyprawyKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                przyprawyKupno.Text = x.ToString();
+            }
+            
+            
+        }
+        public void odswiezTkanine()
+        {
+            tkaninaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO03").ToString();
+            tkaninaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO03").ToString();
+            tow tmp = new tow("TO03", idm);
+            tmp.policzCena();
+            tkaninaSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                tkaninaKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                tkaninaKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezSkory()
+        {
+            skoraKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO10").ToString();
+            skoraMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO10").ToString();
+            tow tmp = new tow("TO10", idm);
+            tmp.policzCena();
+            skoraSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                skoraKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                skoraKupno.Text = x.ToString();
+            }
+        }
+        public void odswiezPerle()
+        {
+            perlaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO07").ToString();
+            perlaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO07").ToString();
+            tow tmp = new tow("TO07", idm);
+            tmp.policzCena();
+            perlaSprzedarz.Text = tmp.DajCeneSp().ToString();
+            int x = tmp.DajCeneKup();
+            if (x == -1)
+            {
+                perlaKupno.Text = "niemożliwe";
+            }
+            else
+            {
+                perlaKupno.Text = x.ToString();
+            }
+        }
+
+        private bool sprzedaz(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena) {
             string mess = handel.sprzedaj(IDkarawana, IDmiasto, IDtowar, ile, cena);
             if (mess == "done")
             {
-                odswiez();
                 MainWindow.odzwierzGlowne();
+                return true;
             }
             else
             {
                 Errors er = new Errors(mess);
                 er.Show();
+                return false;
             }
         }
-        private void kupowanie(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena) {
+        private bool kupowanie(string IDkarawana, string IDmiasto, string IDtowar, int ile, int cena) {
             string mess = handel.kup(IDkarawana, IDmiasto, IDtowar, ile, cena);
             if (mess == "done")
             {
-                odswiez();
                 MainWindow.odzwierzGlowne();
+                return true;
             }
             else
             {
                 Errors er = new Errors(mess);
                 er.Show();
+                return false;
             }
         }
         private void exitZ_Click(object sender, RoutedEventArgs e) //zamknięcie okna
@@ -155,7 +276,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(tkan.Text);
             int cena = Convert.ToInt32(tkaninaSprzedarz.Text);
-            sprzedaz(idk, idm, "TO03", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO03", ile, cena);
+            if (czy == true) { odswiezTkanine(); }
         }
 
         private void buttonT2_Click(object sender, RoutedEventArgs e)//tkanina -
@@ -179,7 +301,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO03", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO03", ile, cena);
+            if (czy == true) { odswiezTkanine(); }
         }
 
         private void buttonT4_Click(object sender, RoutedEventArgs e)//tkanina +
@@ -194,7 +317,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(wino.Text);
             int cena = Convert.ToInt32(winoSprzedarz.Text);
-            sprzedaz(idk, idm, "TO09", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO09", ile, cena);
+            if (czy == true) { odswiezWino(); }
         }
 
         private void buttonW2_Click(object sender, RoutedEventArgs e)//wino -
@@ -218,7 +342,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO09", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO09", ile, cena);
+            if (czy == true) { odswiezWino(); }
         }
 
         private void buttonW4_Click(object sender, RoutedEventArgs e)//wino +
@@ -233,7 +358,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(bron.Text);
             int cena = Convert.ToInt32(bronSprzedarz.Text);
-            sprzedaz(idk, idm, "TO06", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO06", ile, cena);
+            if (czy == true) { odswiezBron(); }
         }
 
         private void buttonB2_Click(object sender, RoutedEventArgs e)//bron -
@@ -257,7 +383,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO06", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO06", ile, cena);
+            if (czy == true) { odswiezBron(); }
         }
 
         private void buttonB4_Click(object sender, RoutedEventArgs e)//bron +
@@ -272,7 +399,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(hleb.Text);
             int cena = Convert.ToInt32(chlebSprzedarz.Text);
-            sprzedaz(idk, idm, "TO05", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO05", ile, cena);
+            if (czy == true) { odswiezChleb(); }
         }
 
         private void buttonC2_Click(object sender, RoutedEventArgs e)//chleb -
@@ -296,7 +424,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO05", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO05", ile, cena);
+            if (czy == true) { odswiezChleb(); }
         }
 
         private void buttonC4_Click(object sender, RoutedEventArgs e)//chleb +
@@ -311,7 +440,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(brondrz.Text);
             int cena = Convert.ToInt32(drewnoSprzedarz.Text);
-            sprzedaz(idk, idm, "TO01", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO01", ile, cena);
+            if (czy == true) { odswiezDrewno(); }
         }
 
         private void buttonD2_Click(object sender, RoutedEventArgs e)//drewno -
@@ -335,7 +465,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO01", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO01", ile, cena);
+            if (czy == true) { odswiezDrewno(); }
         }
 
         private void buttonD4_Click(object sender, RoutedEventArgs e)//drewno +
@@ -350,7 +481,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(jabl.Text);
             int cena = Convert.ToInt32(jablkoSprzedarz.Text);
-            sprzedaz(idk, idm, "TO02", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO02", ile, cena);
+            if (czy == true) { odswiezJablko(); }
         }
 
         private void buttonJ2_Click(object sender, RoutedEventArgs e)//jabłko -
@@ -374,7 +506,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO02", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO02", ile, cena);
+            if (czy == true) { odswiezJablko(); }
         }
 
         private void buttonJ4_Click(object sender, RoutedEventArgs e)//jabłko +
@@ -389,7 +522,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(mies.Text);
             int cena = Convert.ToInt32(miesoSprzedarz.Text);
-            sprzedaz(idk, idm, "TO04", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO04", ile, cena);
+            if (czy == true) { odswiezMieso(); }
         }
 
         private void buttonM2_Click(object sender, RoutedEventArgs e)//mięso -
@@ -413,7 +547,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO04", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO04", ile, cena);
+            if (czy == true) { odswiezMieso(); }
         }
 
         private void buttonM4_Click(object sender, RoutedEventArgs e)//mięso +
@@ -428,7 +563,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(perl.Text);
             int cena = Convert.ToInt32(perlaSprzedarz.Text);
-            sprzedaz(idk, idm, "TO07", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO07", ile, cena);
+            if (czy == true) { odswiezPerle(); }
         }
 
         private void buttonP2_Click(object sender, RoutedEventArgs e)//perła -
@@ -452,7 +588,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO07", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO07", ile, cena);
+            if (czy == true) { odswiezPerle(); }
         }
 
         private void buttonP4_Click(object sender, RoutedEventArgs e)//perła +
@@ -467,7 +604,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(skur.Text);
             int cena = Convert.ToInt32(skoraSprzedarz.Text);
-            sprzedaz(idk, idm, "TO10", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO10", ile, cena);
+            if (czy == true) { odswiezSkory(); }
         }
 
         private void buttonS2_Click(object sender, RoutedEventArgs e)//skóra -
@@ -491,7 +629,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO10", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO10", ile, cena);
+            if (czy == true) { odswiezSkory(); }
         }
 
         private void buttonS4_Click(object sender, RoutedEventArgs e)//skóra +
@@ -506,7 +645,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(srodki.Text);
             int cena = Convert.ToInt32(alchemiaSprzedarz.Text);
-            sprzedaz(idk, idm, "TO11", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO11", ile, cena);
+            if (czy == true) { odswiezAlchemie(); }
         }
 
         private void buttonA2_Click(object sender, RoutedEventArgs e)//alchemia -
@@ -530,7 +670,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO11", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO11", ile, cena);
+            if (czy == true) { odswiezAlchemie(); }
         }
 
         private void buttonA4_Click(object sender, RoutedEventArgs e)//alchemia +
@@ -545,7 +686,8 @@ namespace Caravans
         {
             int ile = Convert.ToInt32(przyp.Text);
             int cena = Convert.ToInt32(przyprawySprzedarz.Text);
-            sprzedaz(idk, idm, "TO08", ile, cena);
+            bool czy = sprzedaz(idk, idm, "TO08", ile, cena);
+            if (czy == true) { odswiezPrzyprawe(); }
         }
 
         private void buttonX2_Click(object sender, RoutedEventArgs e)//przyprawy -
@@ -569,7 +711,8 @@ namespace Caravans
             {
                 cena = Convert.ToInt32(tmp);
             }
-            kupowanie(idk, idm, "TO08", ile, cena);
+            bool czy = kupowanie(idk, idm, "TO08", ile, cena);
+            if (czy == true) { odswiezPrzyprawe(); }
         }
 
         private void buttonX4_Click(object sender, RoutedEventArgs e)//przyprawy +
@@ -578,9 +721,6 @@ namespace Caravans
             x = Convert.ToInt32(przyp.Text);
             x++;
             przyp.Text = x.ToString();
-        }
-
-        
+        } 
     }
-
 }

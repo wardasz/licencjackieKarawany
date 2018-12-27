@@ -110,17 +110,17 @@ namespace Caravans
         public void odswiez()
         {
             karawany = przekaznik.dajKarawany();
-            tkaninaPole.Text = przekaznik.IleTowaru(idk, "TO03");
-            winoPole.Text = przekaznik.IleTowaru(idk, "TO09");
-            bronPole.Text = przekaznik.IleTowaru(idk, "TO06");
-            chlebPole.Text = przekaznik.IleTowaru(idk, "TO05");
-            drewnoPole.Text = przekaznik.IleTowaru(idk, "TO01");
-            jablkaPole.Text = przekaznik.IleTowaru(idk, "TO02");
-            miesoPole.Text = przekaznik.IleTowaru(idk, "TO04");
-            perlaPole.Text = przekaznik.IleTowaru(idk, "TO07");
-            skoraPole.Text = przekaznik.IleTowaru(idk, "TO10");
-            alchemiaPole.Text = przekaznik.IleTowaru(idk, "TO11");
-            przyprawyPole.Text = przekaznik.IleTowaru(idk, "TO08");
+            tkaninaPole.Text = przekaznik.IleTowaruKarawana(idk, "TO03").ToString();
+            winoPole.Text = przekaznik.IleTowaruKarawana(idk, "TO09").ToString();
+            bronPole.Text = przekaznik.IleTowaruKarawana(idk, "TO06").ToString();
+            chlebPole.Text = przekaznik.IleTowaruKarawana(idk, "TO05").ToString();
+            drewnoPole.Text = przekaznik.IleTowaruKarawana(idk, "TO01").ToString();
+            jablkaPole.Text = przekaznik.IleTowaruKarawana(idk, "TO02").ToString();
+            miesoPole.Text = przekaznik.IleTowaruKarawana(idk, "TO04").ToString();
+            perlaPole.Text = przekaznik.IleTowaruKarawana(idk, "TO07").ToString();
+            skoraPole.Text = przekaznik.IleTowaruKarawana(idk, "TO10").ToString();
+            alchemiaPole.Text = przekaznik.IleTowaruKarawana(idk, "TO11").ToString();
+            przyprawyPole.Text = przekaznik.IleTowaruKarawana(idk, "TO08").ToString();
             obciozenieMaxPole.Text = przekaznik.PoliczPojemnosc(idk).ToString();
             obciozenieStanPole.Text = przekaznik.PoliczObciozenie(idk).ToString();
             lokalizacjaPole.Text = przekaznik.lokalizuj(idk);
