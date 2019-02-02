@@ -86,7 +86,6 @@
     <Compile Include="matma\podroz.cs" />
     <Compile Include="matma\przekaznik.cs" />
     <Compile Include="matma\Tablicadoliczenia.cs" />
-    <Compile Include="matma\tow.cs" />
     <Compile Include="matma\towar.cs" />
     <Compile Include="matma\warsztat.cs" />
     <Compile Include="model\Modele.cs" />

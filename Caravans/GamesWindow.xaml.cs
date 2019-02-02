@@ -97,5 +97,12 @@ namespace Caravans
             er.Show();
             this.Close();
         }
+
+        //do debuggingu
+        public static void wiadomosc(string a)
+        {
+            Errors er = new Errors("Debug", a);
+            er.Show();
+        }
     }
 }

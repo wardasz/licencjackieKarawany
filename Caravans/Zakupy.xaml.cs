@@ -49,7 +49,7 @@ namespace Caravans
         {
             drewnoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO01").ToString();
             drewnoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO01").ToString();
-            tow tmp = new tow("TO01", idm);
+            towar tmp = new towar("TO01", idm);
             tmp.policzCena();
             drewnoSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -66,7 +66,7 @@ namespace Caravans
         {
             miesoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO04").ToString();
             miesoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO04").ToString();
-            tow tmp = new tow("TO04", idm);
+            towar tmp = new towar("TO04", idm);
             tmp.policzCena();
             miesoSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -83,7 +83,7 @@ namespace Caravans
         {
             chlebKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO05").ToString();
             chlebMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO05").ToString();
-            tow tmp = new tow("TO05", idm);
+            towar tmp = new towar("TO05", idm);
             tmp.policzCena();
             chlebSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -100,7 +100,7 @@ namespace Caravans
         {
             jablkoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO02").ToString();
             jablkoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO02").ToString();
-            tow tmp = new tow("TO02", idm);
+            towar tmp = new towar("TO02", idm);
             tmp.policzCena();
             jablkoSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -117,7 +117,7 @@ namespace Caravans
         {
             bronKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO06").ToString();
             bronMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO06").ToString();
-            tow tmp = new tow("TO06", idm);
+            towar tmp = new towar("TO06", idm);
             tmp.policzCena();
             bronSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -134,7 +134,7 @@ namespace Caravans
         {
             winoKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO09").ToString();
             winoMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO09").ToString();
-            tow tmp = new tow("TO09", idm);
+            towar tmp = new towar("TO09", idm);
             tmp.policzCena();
             winoSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -151,7 +151,7 @@ namespace Caravans
         {
             alchemiaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO11").ToString();
             alchemiaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO11").ToString();
-            tow tmp = new tow("TO11", idm);
+            towar tmp = new towar("TO11", idm);
             tmp.policzCena();
             alchemiaSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -169,7 +169,7 @@ namespace Caravans
         {
             przyprawyKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO08").ToString();
             przyprawyMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO08").ToString();
-            tow tmp = new tow("TO08", idm);
+            towar tmp = new towar("TO08", idm);
             tmp.policzCena();
             przyprawySprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -188,7 +188,7 @@ namespace Caravans
         {
             tkaninaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO03").ToString();
             tkaninaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO03").ToString();
-            tow tmp = new tow("TO03", idm);
+            towar tmp = new towar("TO03", idm);
             tmp.policzCena();
             tkaninaSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -205,7 +205,7 @@ namespace Caravans
         {
             skoraKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO10").ToString();
             skoraMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO10").ToString();
-            tow tmp = new tow("TO10", idm);
+            towar tmp = new towar("TO10", idm);
             tmp.policzCena();
             skoraSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();
@@ -222,7 +222,7 @@ namespace Caravans
         {
             perlaKarawana.Text = przekaznik.IleTowaruKarawana(idk, "TO07").ToString();
             perlaMiasto.Text = przekaznik.IleTowaruMiasto(idm, "TO07").ToString();
-            tow tmp = new tow("TO07", idm);
+            towar tmp = new towar("TO07", idm);
             tmp.policzCena();
             perlaSprzedarz.Text = tmp.DajCeneSp().ToString();
             int x = tmp.DajCeneKup();

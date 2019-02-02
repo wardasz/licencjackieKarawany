@@ -843,26 +843,22 @@ namespace Caravans.matma
 
         public void tydzien()
         {
-            foreach (TableTown wiocha in Modele.tableTown)
+            foreach (TableArtInTown towar in Modele.tableArtInTown)
             {
-                string idm = wiocha.GetId();
-                int popu = wiocha.GetPopulation();
-                int got = wiocha.GetMilitary();
-                int dobr = wiocha.GetProsperity();
-                int zyw = wiocha.GetFood();
-                miasto wies = new miasto(idm, popu, got, zyw, dobr);
-                wies.wypelnij(idm);
+                towar tmp = new towar(towar);
+                tmp.zmianaIlosci();
+            }
 
-                wies.policzTowary();
-                wies.zmianaPopulacji();
+            foreach (TableTown miasto in Modele.tableTown)
+            {              
+                miasto miasto2 = new miasto(miasto);
 
-                wiocha.SetPopulation(wies.getPopulacje());
-                wiocha.SetMilitary(wies.getGotowosc());
-                wiocha.SetProsperity(wies.getDobrobyt());
-                wiocha.SetFood(wies.getZywnosc());
+                miasto2.zmianaPopulacji();
 
-                wies.dajDane();
-
+                miasto.SetPopulation(miasto2.getPopulacje());
+                miasto.SetMilitary(miasto2.getGotowosc());
+                miasto.SetProsperity(miasto2.getDobrobyt());
+                miasto.SetFood(miasto2.getZywnosc());
             }
         }
     }

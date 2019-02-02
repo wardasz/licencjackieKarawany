@@ -9,38 +9,78 @@ namespace Caravans.matma
 {
     class towar
     {
-        private String id;                  //id towaru
+        private string IDtowar;
+        private string IDmiasto;
+
         private int ilosc;                  //ilość towaru w mieście
         private int cenaDef;                //podstawowa cena towaru
         private int produkcjaDef;           //podstawowa produkcja towaru
         private int produkcjaMod;           //miejski modyfikator produkcji towaru
         private int zapotrzebowanieDef;     //podstawowe zapotrzebowanie na towar
         private int zapotrzebowanieMod;     //miejski modyfikator zapotrzebowania na towar
+        private int populacja;
 
-        private int cenaKup;                //aktualna cena towaru
-        private int cenaSprzed;             //aktualne zapotrzebowanie 
+        private int cenaKup;
+        private int cenaSp;
+        private int prodAkt;
+        private int zapoAkt;
 
-        public towar(String x, int a, int b, int c, int d, int e, int f)
+        public towar(TableArtInTown t)
+            : this(t.GetIdArticle(), t.GetId())
         {
-            id = x;
-            ilosc = a;
-            cenaDef = b;
-            produkcjaDef = c;
-            produkcjaMod = d;
-            zapotrzebowanieDef = e;
-            zapotrzebowanieMod = f;
-            cenaKup = 0;
-            cenaSprzed = 0;
         }
 
-        public String dajId() { return id; }
-        public int dajIlosc() { return ilosc; }
-        public int dajProdukcje() { return produkcjaMod; }
-        public int dajZapotrzebowanie() { return zapotrzebowanieMod; }
-        public int dajCenaKup() { return cenaKup; }
-        public int dajCenaSprzed() { return cenaSprzed; }
+        public towar(string idt, string idm)
+        {
+            IDmiasto = idm;
+            IDtowar = idt;
 
-        public int policzZapotrzebowanie(int pop)
+            TableArticle towar = Modele.ZnajdzTowar(idt);        
+            cenaDef = towar.GetPrice();
+            produkcjaDef = towar.GetProduction();
+            zapotrzebowanieDef = towar.GetRequisition();
+
+
+            TableArtInTown towarW = Modele.ZnajdzTowarWMiescie(idt, idm);
+            ilosc = towarW.GetNumber();
+            produkcjaMod = towarW.GetProduction();
+            zapotrzebowanieMod = towarW.GetRequisition();
+
+            TableTown miasto = Modele.ZnajdzMiasto(idm);
+            populacja = miasto.GetPopulation();
+
+            cenaKup = 0;
+            cenaSp = 0;
+            prodAkt = 0;
+            zapoAkt = 0;
+        }
+
+        public int DajCeneKup()
+        {
+            return cenaKup;
+        }
+
+        public int DajCeneSp()
+        {
+            return cenaSp;
+        }
+
+        public int DajZapotrzebowanie()
+        {
+            return zapoAkt;
+        }
+
+        public int DajProdukcje()
+        {
+            return prodAkt;
+        }
+
+        public int DajIlosc()
+        {
+            return ilosc;
+        }
+
+        public void policzZapotrzebowanie()
         {
             double x;
             if (zapotrzebowanieDef == 0)
@@ -68,10 +108,11 @@ namespace Caravans.matma
                 }
             }
             int zap = Convert.ToInt32(x);
-            return zap * pop;
+            int pop = populacja / 100;
+            zapoAkt = zap * pop;
         }
 
-        public int policzProdukcje(int pop)
+        public void policzProdukcje()
         {
             double x;
             if (produkcjaDef == 0)
@@ -99,127 +140,34 @@ namespace Caravans.matma
                 }
             }
             int prod = Convert.ToInt32(x);
-            return prod * pop;
+            int pop = populacja / 100;
+            prodAkt = prod * pop;
         }
 
-        public void policzCena(int pop)
+        public void zmianaIlosci()
         {
-            double roznica;
-            int zapotrzebowanie = policzZapotrzebowanie(pop);
-
-            if (zapotrzebowanie == 0)
-            {
-                roznica = 1;
-            }
-            else
-            {
-                roznica = ilosc / zapotrzebowanie;
-            }
-
-
-
-            if (roznica < 0.18)
-            {
-                cenaKup = -1;
-                cenaSprzed = 8 * cenaDef;
-            }
-            else
-            {
-                if (roznica < 0.25)
-                {
-                    cenaKup = -1;
-                    cenaSprzed = 5 * cenaDef;
-                }
-                else
-                {
-                    if (roznica < 0.5)
-                    {
-                        double odw = 1 / roznica;
-                        double x;
-                        double y;
-                        x = (int)cenaDef * odw;
-                        y = x + x * 0.2;
-                        cenaKup = Convert.ToInt32(y);
-                        x = x - x * 0.1;
-                        cenaSprzed = Convert.ToInt32(x);
-                    }
-                    else
-                    {
-                        if (roznica < 1)
-                        {
-                            double odw = 1 / roznica;
-                            double x;
-                            double y;
-                            x = (int)cenaDef * odw;
-                            y = x + x * 0.1;
-                            cenaKup = Convert.ToInt32(y);
-                            x = x - x * 0.1;
-                            cenaSprzed = Convert.ToInt32(x);
-                        }
-                        else
-                        {
-                            if (roznica <= 2)
-                            {
-                                double x;
-                                double y;
-                                x = cenaDef + cenaDef * 0.05;
-                                cenaKup = Convert.ToInt32(x);
-                                y = cenaDef - cenaDef * 0.05;
-                                cenaSprzed = Convert.ToInt32(y);
-                            }
-                            else
-                            {
-                                if (roznica < 10)
-                                {
-                                    double x = roznica;
-                                    x = 1 / x;
-                                    x = x * 2;
-                                    double y = x;
-                                    x = cenaDef * x;
-                                    y = cenaDef * y;
-                                    x = x + x * 0.05;
-                                    y = y - y * 0.05;
-                                    cenaKup = Convert.ToInt32(x);
-                                    cenaSprzed = Convert.ToInt32(y);
-                                }
-                                else
-                                {
-                                    double x = cenaDef * 0.2;
-                                    double y = cenaDef * 0.17;
-                                    cenaKup = Convert.ToInt32(x);
-                                    cenaSprzed = Convert.ToInt32(y);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        public int zmianaIlosci(int pop)
-        {
-            int zap = policzZapotrzebowanie(pop);
-            int prod = policzProdukcje(pop);
+            policzZapotrzebowanie();
+            policzProdukcje();
             int wynik = 0;
-            int x = 0;
+            int niedobor = 0;
 
-            ilosc -= zap;
+            ilosc -= zapoAkt;
             if (ilosc < 0)
             {
                 wynik--;
-                x = ilosc * -1;
+                niedobor = ilosc * -1;
                 ilosc = 0;
             }
 
-            if (x == 0)
+            if (niedobor == 0)
             {
-                ilosc += prod;
+                ilosc += prodAkt;
             }
             else
             {
-                ilosc += prod;
-                x /= 2;
-                ilosc -= x;
+                ilosc += prodAkt;
+                niedobor /= 2;
+                ilosc -= niedobor;
                 if (ilosc < 0)
                 {
                     ilosc = 0;
@@ -228,34 +176,108 @@ namespace Caravans.matma
             }
 
             double roznica;
-            if (zap == 0)
+            if (zapoAkt == 0)
             {
                 roznica = 0;
             }
             else
             {
-                roznica = ilosc / zap;
+                roznica = ilosc / zapoAkt;
             }
-
             if (roznica >= 5) { wynik++; }
 
+            TableArtInTown towar = Modele.ZnajdzTowarWMiescie(IDtowar, IDmiasto);
+            towar.SetNumber(ilosc);
 
-            return wynik;
+            TableTown miasto = Modele.ZnajdzMiasto(IDmiasto);
+            int prosp = miasto.GetProsperity();
+            prosp = prosp + wynik;
+            miasto.SetProsperity(prosp);
         }
 
-        public void wyprowadzDane(string idm)
+        public void policzCena()
         {
-            foreach (TableArtInTown tow in Modele.tableArtInTown)
+            policzZapotrzebowanie();
+            policzProdukcje();
+
+            double roznica;
+            if (zapoAkt == 0)
             {
-                string id1 = tow.GetId();
-                string id2 = tow.GetIdArticle();
-                if (idm == id1 && id == id2)
-                {
-                    tow.SetNumber(dajIlosc());
-                    tow.SetProduction(dajProdukcje());
-                    tow.SetRequisition(dajZapotrzebowanie());
-                }
+                roznica = 1;
             }
+            else
+            {
+                roznica = ilosc / zapoAkt;
+            }
+
+            if (roznica < 0.18)
+            {
+                cenaKup = -1;
+                cenaSp = 8 * cenaDef;
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 0.25)
+            {
+                double x = roznica - 0.18;
+                double y = x / 0.07;
+                double z = 3 * y;
+                cenaKup = -1;
+                cenaSp = (int)((8 - z) * cenaDef);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 0.5)
+            {
+                double x = roznica - 0.25;
+                double y = x / 0.25;
+                double z = 3 * y;
+                cenaSp = (int)((5 - z) * cenaDef);
+                cenaKup = (int)((5 - z) * cenaDef * 1.1);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 0.9)
+            {
+                double x = roznica - 0.5;
+                double y = x / 0.4;
+                double z = 1 * y;
+                cenaSp = (int)((2 - z) * cenaDef);
+                cenaKup = (int)((2 - z) * cenaDef * 1.1);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 1.1)
+            {
+                cenaSp = (int)(cenaDef);
+                cenaKup = (int)(cenaDef * 1.1);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 2)
+            {
+                double x = roznica - 1.1;
+                double y = x / 0.9;
+                double z = 0.3 * y;
+                cenaSp = (int)((1 - z) * cenaDef);
+                cenaKup = (int)((1 - z) * cenaDef * 1.1);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            if (roznica < 10)
+            {
+                double x = roznica - 2;
+                double y = x / 8;
+                double z = 0.5 * y;
+                cenaSp = (int)((0.7 - z) * cenaDef);
+                cenaKup = (int)((0.7 - z) * cenaDef * 1.1);
+                if (cenaKup == cenaSp) { cenaKup++; }
+                return;
+            }
+            cenaSp = (int)(0.2 * cenaDef);
+            cenaKup = (int)(0.2 * cenaDef * 1.1);
+            if (cenaKup == cenaSp) { cenaKup++; }
+
         }
     }
 }

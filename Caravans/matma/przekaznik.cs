@@ -219,39 +219,16 @@ namespace Caravans.matma
 
         public static string dajInfo(string idt, string idm, int populacja)
         {
-            int pop = populacja / 100;
-            if (pop == 0) { pop = 1; }
             string wynik = "";
-            int ilosc=0;
-            int cenaDef=0;                
-            int produkcjaDef=0;          
-            int produkcjaMod=0;           
-            int zapotrzebowanieDef=0;   
-            int zapotrzebowanieMod = 0;
 
-            foreach(TableArticle towar in Modele.tableArticle)
-            {
-                if (towar.GetId() == idt)
-                {
-                    cenaDef = towar.GetPrice();
-                    produkcjaDef = towar.GetProduction();
-                    zapotrzebowanieDef = towar.GetRequisition();
-                }
-            }
+            towar t = new towar(idt, idm);
+            t.policzProdukcje();
+            t.policzZapotrzebowanie();
 
-            foreach(TableArtInTown towar in Modele.tableArtInTown)
-            {
-                if(towar.GetId()==idm && towar.GetIdArticle() == idt)
-                {
-                    ilosc = towar.GetNumber();
-                    zapotrzebowanieMod = towar.GetRequisition();
-                    produkcjaMod = towar.GetProduction();
-                }
-            }
+            int prod = t.DajProdukcje();
+            int zap = t.DajZapotrzebowanie();
+            int ilosc = t.DajIlosc();
 
-            towar tow = new towar(idt, ilosc, cenaDef, produkcjaDef, produkcjaMod, zapotrzebowanieDef, zapotrzebowanieMod);
-            int prod = tow.policzProdukcje(pop);
-            int zap = tow.policzZapotrzebowanie(pop);
             int x;
             if (prod == zap) wynik = "Produkcja idealnie pokrywa zapotrzebowanie.";
             if (prod > zap)
@@ -372,6 +349,11 @@ namespace Caravans.matma
             {
                 return false;
             }
+        }
+
+        public static void raportuj(string wiadomosc)
+        {                 
+            System.IO.File.AppendAllText(@"D:\programowanie\licencjackieKarawany\raport.txt", wiadomosc+"\n");
         }
 
     }

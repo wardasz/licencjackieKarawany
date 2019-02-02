@@ -14,49 +14,29 @@ namespace Caravans.matma
         private int gotowosc;       //100 to standard, powyzej 300 wypowiada wojnę
         private int zywnosc;        //-100 to kompletny brak, 0 standard, 100-2x tyle, 200-3x tyle...
         private int dobrobyt;       //uj wie
-        List<towar> towary = new List<towar>();
 
-        public miasto(string s, int a, int b, int c, int d)
+        public miasto(string ID)
         {
-            id = s;
-            populacja = a;
-            gotowosc = b;
-            zywnosc = c;
-            dobrobyt = d;
+            TableTown tmp = Modele.ZnajdzMiasto(ID);
+            id = ID;
+            populacja = tmp.GetPopulation();
+            gotowosc = tmp.GetMilitary();
+            zywnosc = tmp.GetFood();
+            dobrobyt = tmp.GetProsperity();
+        }
+        public miasto(TableTown t)
+        {
+            id = t.GetId();
+            populacja = t.GetPopulation();
+            gotowosc = t.GetMilitary();
+            zywnosc = t.GetFood();
+            dobrobyt = t.GetProsperity();
         }
 
         public int getPopulacje() { return populacja; }
         public int getZywnosc() { return zywnosc; }
         public int getGotowosc() { return gotowosc; }
         public int getDobrobyt() { return dobrobyt; }
-
-        public void wypelnij(string id)
-        {
-            foreach (TableArtInTown t in Modele.tableArtInTown)
-            {
-                string x = t.GetId();
-                if (x == id)
-                {
-                    string idt = t.GetIdArticle();
-                    int ilosc = t.GetNumber();
-                    int prodM = t.GetProduction();
-                    int zapM = t.GetRequisition();
-
-                    foreach (TableArticle z in Modele.tableArticle)
-                    {
-                        x = z.GetId();
-                        if (x == idt)
-                        {
-                            int cena = z.GetPrice();
-                            int prodD = z.GetProduction();
-                            int zapD = z.GetRequisition();
-                            towar tow = new towar(idt, ilosc, cena, prodD, prodM, zapD, zapM);
-                            towary.Add(tow);
-                        }
-                    }
-                }
-            }
-        }
 
         public void zmianaPopulacji()
         {
@@ -98,56 +78,32 @@ namespace Caravans.matma
             if (populacja < 50) populacja = 50;
         }
 
-        public void policzTowary()
-        {
-            foreach (towar x in towary)
-            {
-                int pop = populacja / 100;
-                if (pop == 0) { pop = 1; }
-                int zmiana = x.zmianaIlosci(pop);
-                dobrobyt = +zmiana;
-            }
-        }
-
-        public void dajDane()
-        {
-            foreach (towar x in towary)
-            {
-                x.wyprowadzDane(id);
-            }
-        }
-
         public void policzZywnosc(int popu)
         {
-            int zapJabl=0;
-            int zapMies=0;
-            int zapChleb=0;
-            int ileJabl=0;
-            int ileMies=0;
-            int ileChleb=0;
-            String idek;
+            int zapJabl;
+            int zapMies;
+            int zapChleb;
+            int ileJabl;
+            int ileMies;
+            int ileChleb;
 
-            foreach(towar tow in towary)
-            {
-                idek = tow.dajId();
-                switch (idek)
-                {
-                    case "TO02": //jabłka
-                        zapJabl = tow.policzZapotrzebowanie(popu);
-                        ileJabl = tow.dajIlosc();
-                        break;
-                    case "TO05": //chleb
-                        zapChleb = tow.policzZapotrzebowanie(popu);
-                        ileChleb = tow.dajIlosc();
-                        break;
-                    case "TO04": //mieso
-                        zapMies = tow.policzZapotrzebowanie(popu);
-                        ileMies = tow.dajIlosc();
-                        break;
-                    default:
-                        break;
-                }
-            }
+            TableArtInTown towar1 = Modele.ZnajdzTowarWMiescie("TO02", id);
+            towar towar2 = new towar(towar1);
+            towar2.policzZapotrzebowanie();
+            zapJabl = towar2.DajZapotrzebowanie();
+            ileJabl = towar1.GetNumber();
+
+            towar1 = Modele.ZnajdzTowarWMiescie("TO04", id);
+            towar2 = new towar(towar1);
+            towar2.policzZapotrzebowanie();
+            zapMies = towar2.DajZapotrzebowanie();
+            ileMies = towar1.GetNumber();
+
+            towar1 = Modele.ZnajdzTowarWMiescie("TO05", id);
+            towar2 = new towar(towar1);
+            towar2.policzZapotrzebowanie();
+            zapChleb = towar2.DajZapotrzebowanie();
+            ileChleb = towar1.GetNumber();
 
             double zapSuma = zapMies + zapJabl + zapChleb;
             double ileSuma = ileMies + ileJabl + ileChleb;
